@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://3pcsx1nk5dk0"]
+[gd_scene load_steps=43 format=3 uid="uid://3pcsx1nk5dk0"]
 
 [ext_resource type="PackedScene" uid="uid://drt58mt48yk0g" path="res://nodes/Character/main_character.tscn" id="1_yjgeo"]
 [ext_resource type="Texture2D" uid="uid://bp5hs8hji4y4s" path="res://suelo/decorative.png" id="5_mcgor"]
@@ -27,6 +27,7 @@
 [ext_resource type="Texture2D" uid="uid://cdxxd05ryndx3" path="res://suelo/mainlevbuild (14).png" id="27_ync8a"]
 [ext_resource type="Texture2D" uid="uid://c5p0y5kttjytf" path="res://suelo/mainlevbuild (9).png" id="28_42ghu"]
 [ext_resource type="Texture2D" uid="uid://dvjv13h5bfbyy" path="res://suelo/mainlevbuild (19).png" id="29_laleb"]
+[ext_resource type="AudioStream" uid="uid://cfd2oxn4unfv5" path="res://Assets/Sounds/Ambience/creepy-vocal-ambience-6074.mp3" id="30_lb4w5"]
 [ext_resource type="Texture2D" uid="uid://f5k7ch4662of" path="res://suelo/torch_1.png" id="30_tmlrb"]
 [ext_resource type="Texture2D" uid="uid://drurbqloovd0l" path="res://suelo/spike_4.png" id="31_c04sw"]
 [ext_resource type="Texture2D" uid="uid://i6gml0fuotmc" path="res://suelo/decorative (4).png" id="32_n8sjk"]
@@ -2609,6 +2610,9 @@ color = Color(0.41598, 0.41598, 0.41598, 1)
 blend_mode = 1
 
 [node name="AmbientAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("30_lb4w5")
+volume_db = -22.471
+autoplay = true
 
 [node name="Mainlevbuild(10)" type="Sprite2D" parent="."]
 position = Vector2(1156.5, 3343.75)
