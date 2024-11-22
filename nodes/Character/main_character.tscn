@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://dpkjlcue60mw5" path="res://Mijael - recursos/Circulo-blur.png" id="9_f8h0f"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6lr7q"]
-size = Vector2(95, 98.7499)
+size = Vector2(95, 69.9999)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_j8hhf"]
 atlas = ExtResource("1_hbwp7")
@@ -451,7 +451,8 @@ collision_mask = 3
 script = ExtResource("1_5tico")
 
 [node name="ColNiña" type="CollisionShape2D" parent="."]
-position = Vector2(7.5, 10.625)
+position = Vector2(7.5, 25)
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_6lr7q")
 
 [node name="AnimNiña" type="AnimatedSprite2D" parent="."]
