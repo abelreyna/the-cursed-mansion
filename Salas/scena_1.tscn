@@ -43,7 +43,7 @@ size = Vector2(158, 1098)
 size = Vector2(1926, 3754)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vomgx"]
-size = Vector2(1456, 1010)
+size = Vector2(1778, 1270)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bhv53"]
 size = Vector2(901, 1856)
@@ -1243,11 +1243,6 @@ texture = ExtResource("7_ajcd4")
 position = Vector2(2110, 3512)
 scale = Vector2(12.7868, 10.8826)
 texture = ExtResource("8_xkbce")
-
-[node name="Mainlevbuild(10)" type="Sprite2D" parent="Fondo_1"]
-position = Vector2(1102.5, 3235.75)
-scale = Vector2(6.69928, 9.95779)
-texture = ExtResource("16_8jivg")
 
 [node name="Mainlevbuild(12)" type="Sprite2D" parent="Fondo_1"]
 position = Vector2(1166, 3621)
@@ -2599,15 +2594,13 @@ scale = Vector2(13.4855, 8.25001)
 texture = ExtResource("5_mcgor")
 
 [node name="Character_main" parent="." instance=ExtResource("1_yjgeo")]
-position = Vector2(-835, 2501)
-scale = Vector2(1, 1)
+position = Vector2(-777, 2559)
 
 [node name="Camera2D" type="Camera2D" parent="Character_main"]
 position = Vector2(19.9998, -40.0004)
 
 [node name="Enemy_1" parent="." node_paths=PackedStringArray("player") instance=ExtResource("6_sy0r2")]
-position = Vector2(2372, 2434)
-scale = Vector2(5, 5)
+position = Vector2(-154, 2546)
 player = NodePath("../Character_main")
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
@@ -2616,6 +2609,11 @@ color = Color(0.41598, 0.41598, 0.41598, 1)
 blend_mode = 1
 
 [node name="AmbientAudio" type="AudioStreamPlayer" parent="."]
+
+[node name="Mainlevbuild(10)" type="Sprite2D" parent="."]
+position = Vector2(1156.5, 3343.75)
+scale = Vector2(6.69928, 9.95779)
+texture = ExtResource("16_8jivg")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
@@ -2658,3 +2656,10 @@ shape = SubResource("RectangleShape2D_6imhd")
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(5071.75, 7672.5)
 shape = SubResource("RectangleShape2D_3klut")
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1152, 3412)
+shape = SubResource("RectangleShape2D_vomgx")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(54, 108)
