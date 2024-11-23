@@ -2611,7 +2611,7 @@ blend_mode = 1
 
 [node name="AmbientAudio" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("30_lb4w5")
-volume_db = -22.471
+volume_db = -24.947
 autoplay = true
 
 [node name="Mainlevbuild(10)" type="Sprite2D" parent="."]

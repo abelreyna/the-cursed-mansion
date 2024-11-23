@@ -1,4 +1,4 @@
-[gd_scene load_steps=69 format=3 uid="uid://drt58mt48yk0g"]
+[gd_scene load_steps=71 format=3 uid="uid://drt58mt48yk0g"]
 
 [ext_resource type="Script" path="res://nodes/Character/main_character.gd" id="1_5tico"]
 [ext_resource type="Texture2D" uid="uid://dh12ye7g8p1yo" path="res://Assets/Niña/Idle/idle_down.png" id="1_hbwp7"]
@@ -9,7 +9,9 @@
 [ext_resource type="Texture2D" uid="uid://b71tmgcjj364q" path="res://Assets/Niña/Walk/walk_right_up.png" id="6_8jfda"]
 [ext_resource type="Texture2D" uid="uid://b7iftsqvwenku" path="res://Assets/Niña/Walk/walk_up.png" id="7_ljy1s"]
 [ext_resource type="Texture2D" uid="uid://dpkjlcue60mw5" path="res://Mijael - recursos/Circulo-blur.png" id="9_f8h0f"]
-[ext_resource type="AudioStream" uid="uid://co7obe1w1megj" path="res://Assets/Sounds/Walking/walking-on-wooden-floor-94493.mp3" id="10_0818n"]
+[ext_resource type="AudioStream" uid="uid://7voewx0pqmbf" path="res://Assets/Sounds/Walking/Concrete Footsteps (1).mp3" id="10_6k7tx"]
+[ext_resource type="AudioStream" uid="uid://cqscnc6cqugo0" path="res://Assets/Sounds/Flashlight/Flashlight on.wav" id="11_q26q1"]
+[ext_resource type="AudioStream" uid="uid://cahv2inj850ui" path="res://Assets/Sounds/Flashlight/Flashlight off.wav" id="12_qg4rg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6lr7q"]
 size = Vector2(95, 98.7499)
@@ -465,5 +467,11 @@ color = Color(0.780392, 0.447059, 0, 1)
 texture = ExtResource("9_f8h0f")
 
 [node name="AudioWalk" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("10_0818n")
-volume_db = -22.286
+stream = ExtResource("10_6k7tx")
+volume_db = -22.284
+
+[node name="AudioLightOn" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_q26q1")
+
+[node name="AudioLightOff" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_qg4rg")

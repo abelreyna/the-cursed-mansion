@@ -1,7 +1,10 @@
-[gd_scene load_steps=27 format=3 uid="uid://ce7u5u0igniun"]
+[gd_scene load_steps=30 format=3 uid="uid://ce7u5u0igniun"]
 
 [ext_resource type="Texture2D" uid="uid://dotixs3xvpc7t" path="res://nodes/Enemies/Enemy 1/AnimationSheet_Character.png" id="1_ahbm4"]
 [ext_resource type="Script" path="res://nodes/Enemies/Enemy 1/enemy_1.gd" id="1_bpv33"]
+[ext_resource type="AudioStream" uid="uid://dkgar4veema6k" path="res://Assets/Sounds/Walking/stone_01_d.wav" id="3_xyvs7"]
+[ext_resource type="AudioStream" uid="uid://tm4js8bmmtvl" path="res://Assets/Sounds/Terror/chase-180774.mp3" id="4_gk61i"]
+[ext_resource type="AudioStream" uid="uid://ccgr2wqg67uwt" path="res://Assets/Sounds/Terror/danger-203290.mp3" id="5_x6ohy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u1rpm"]
 size = Vector2(16, 22)
@@ -207,6 +210,18 @@ autostart = true
 [node name="Deteccion" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_s68xr")
 one_way_collision_margin = 0.0
+
+[node name="AudioWalk" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_xyvs7")
+volume_db = -22.285
+
+[node name="Terror1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_gk61i")
+volume_db = -22.286
+
+[node name="Terror2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_x6ohy")
+volume_db = -21.048
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
