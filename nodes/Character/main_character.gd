@@ -7,6 +7,10 @@ const SPEED = 450
 @onready var light_on_sound = $AudioLightOn
 @onready var light_off_sound = $AudioLightOff
 
+#nodoizq y der
+@onready var pos_izq = $izq
+@onready var pos_der = $der
+
 func _physics_process(delta):
 	var dir: Vector2 = Input.get_vector("izquierda", "derecha", "arriba", "abajo")
 	

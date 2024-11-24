@@ -13,8 +13,9 @@
 [ext_resource type="AudioStream" uid="uid://cqscnc6cqugo0" path="res://Assets/Sounds/Flashlight/Flashlight on.wav" id="11_q26q1"]
 [ext_resource type="AudioStream" uid="uid://cahv2inj850ui" path="res://Assets/Sounds/Flashlight/Flashlight off.wav" id="12_qg4rg"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_6lr7q"]
-size = Vector2(95, 98.7499)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p4eos"]
+radius = 48.0
+height = 122.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_j8hhf"]
 atlas = ExtResource("1_hbwp7")
@@ -451,18 +452,22 @@ position = Vector2(0, -2)
 collision_mask = 3
 script = ExtResource("1_5tico")
 
+[node name="der" type="Node2D" parent="."]
+position = Vector2(100, 0)
+
+[node name="izq" type="Node2D" parent="."]
+position = Vector2(-100, 0)
+
 [node name="ColNiña" type="CollisionShape2D" parent="."]
-position = Vector2(7.5, 10.625)
-shape = SubResource("RectangleShape2D_6lr7q")
+shape = SubResource("CapsuleShape2D_p4eos")
 
 [node name="AnimNiña" type="AnimatedSprite2D" parent="."]
-position = Vector2(-0.249954, -18.2499)
+position = Vector2(-6, -20)
 scale = Vector2(7.07292, 5.55469)
 sprite_frames = SubResource("SpriteFrames_mrgw4")
 animation = &"Idle"
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
-position = Vector2(10, -10)
 color = Color(0.780392, 0.447059, 0, 1)
 texture = ExtResource("9_f8h0f")
 

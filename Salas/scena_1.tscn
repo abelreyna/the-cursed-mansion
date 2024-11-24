@@ -2595,7 +2595,7 @@ scale = Vector2(13.4855, 8.25001)
 texture = ExtResource("5_mcgor")
 
 [node name="Character_main" parent="." instance=ExtResource("1_yjgeo")]
-position = Vector2(-777, 2559)
+position = Vector2(-750, 2556)
 
 [node name="Camera2D" type="Camera2D" parent="Character_main"]
 position = Vector2(19.9998, -40.0004)
