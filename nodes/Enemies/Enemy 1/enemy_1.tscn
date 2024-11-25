@@ -220,7 +220,6 @@ one_way_collision_margin = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackRange"]
 position = Vector2(0, 6.65)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_xgo61")
 
 [node name="AudioWalk" type="AudioStreamPlayer" parent="."]

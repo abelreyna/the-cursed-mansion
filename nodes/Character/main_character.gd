@@ -31,24 +31,45 @@ func _physics_process(delta):
 		if dir.x != 0:
 			if dir.x > 0:
 				if dir.y > 0 or dir.y == 0:
-					$"AnimNiña".play("walk_right_down")
+					if !luz.visible:
+						$"AnimNiña".play("walk_right_down")
+					else:
+						$"AnimNiña".play("walk_right_down_light")
 				if dir.y < 0:
-					$"AnimNiña".play("walk_right_up")
+					if !luz.visible:
+						$"AnimNiña".play("walk_right_up")
+					else:
+						$"AnimNiña".play("walk_right_up_light")
 			else:
 				if dir.y > 0 or dir.y == 0:
-					$"AnimNiña".play("walk_left_down")
+					if !luz.visible:
+						$"AnimNiña".play("walk_left_down")
+					else:
+						$"AnimNiña".play("walk_left_down_light")
 				if dir.y < 0:
-					$"AnimNiña".play("walk_left_up")
+					if !luz.visible:
+						$"AnimNiña".play("walk_left_up")
+					else:
+						$"AnimNiña".play("walk_left_up_light")
 		else:
 			if dir.y > 0:
-				$"AnimNiña".play("walk_down")
+				if !luz.visible:
+					$"AnimNiña".play("walk_down")
+				else:
+					$"AnimNiña".play("walk_down_light")
 			else:
-				$"AnimNiña".play("walk_up")
+				if !luz.visible:
+					$"AnimNiña".play("walk_up")
+				else:
+					$"AnimNiña".play("walk_up_light")
 	else:
 		# Detener el sonido de caminar si el personaje está quieto
 		if walking_sound.playing:
 			walking_sound.stop()
-		$"AnimNiña".play("Idle")
+		if !luz.visible:
+			$"AnimNiña".play("Idle")
+		else:
+			$"AnimNiña".play("Idle_light")
 		
 	velocity = dir.normalized() * SPEED
 	move_and_slide()

@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var speed = 100
+var speed = 150
 @onready var walking_sound = $AudioWalk
 @onready var _terror1_sound = $Terror1
 @onready var _terror2_sound = $Terror2
