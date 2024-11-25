@@ -1,3 +1,4 @@
+ProgressBar
 Node
 PointLight2D
 CollisionShape2D
@@ -12,4 +13,3 @@ DirectionalLight2D
 NavigationRegion2D
 NavigationAgent2D
 CharacterBody2D
-Timer
