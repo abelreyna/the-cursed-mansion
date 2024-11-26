@@ -1,0 +1,506 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_yq53w"]
+
+[resource]
+script = ExtResource("1_yq53w")
+using_states = PackedStringArray()
+titles = {
+"Escena1": "5",
+"Escena2": "16",
+"Escena3": "26",
+"Escena4": "40"
+}
+character_names = PackedStringArray("Escena", "Mamá", "Papá", "Lía")
+first_title = "5"
+lines = {
+"10": {
+"character": "Escena",
+"character_replacements": Array[Dictionary]([]),
+"id": "10",
+"next_id": "11",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "(Lía sonríe, emocionada por lo que le espera. Más tarde, todos suben al auto.)",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "(Lía sonríe, emocionada por lo que le espera. Más tarde, todos suben al auto.)",
+"type": &"dialogue"
+},
+"11": {
+"id": "11",
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "_on_dialogue_ended",
+"type": &"function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "variable",
+"value": "resource"
+}, {
+"type": "colon"
+}, {
+"type": "variable",
+"value": "DialogueResource"
+}])])
+}]),
+"is_blocking": true
+},
+"next_id": "12",
+"type": &"mutation"
+},
+"12": {
+"id": "12",
+"is_snippet": false,
+"next_id": "end",
+"type": &"goto"
+},
+"14": {
+"id": "14",
+"next_id": "16",
+"text": "Escena2",
+"type": &"title"
+},
+"16": {
+"character": "Escena",
+"character_replacements": Array[Dictionary]([]),
+"id": "16",
+"next_id": "17",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Durante el trayecto en auto. Lía mira por la ventana. Todo es oscuro, y apenas hay luces en el camino.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Durante el trayecto en auto. Lía mira por la ventana. Todo es oscuro, y apenas hay luces en el camino.",
+"type": &"dialogue"
+},
+"17": {
+"character": "Lía",
+"character_replacements": Array[Dictionary]([]),
+"id": "17",
+"next_id": "18",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "(un poco preocupada) Mami, papi... ¿por qué todo está tan oscuro? ¿A dónde vamos?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "(un poco preocupada) Mami, papi... ¿por qué todo está tan oscuro? ¿A dónde vamos?",
+"type": &"dialogue"
+},
+"18": {
+"character": "Papá",
+"character_replacements": Array[Dictionary]([]),
+"id": "18",
+"next_id": "19",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "No te preocupes, Lía. Ya casi llegamos.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "No te preocupes, Lía. Ya casi llegamos.",
+"type": &"dialogue"
+},
+"19": {
+"character": "Mamá",
+"character_replacements": Array[Dictionary]([]),
+"id": "19",
+"next_id": "20",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Confía en nosotros, amor.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Confía en nosotros, amor.",
+"type": &"dialogue"
+},
+"20": {
+"character": "Escena",
+"character_replacements": Array[Dictionary]([]),
+"id": "20",
+"next_id": "21",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "El auto se desvía por un camino rodeado de árboles. La carretera es estrecha y tenebrosa. Lía siente un escalofrío.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "El auto se desvía por un camino rodeado de árboles. La carretera es estrecha y tenebrosa. Lía siente un escalofrío.",
+"type": &"dialogue"
+},
+"21": {
+"id": "21",
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "_on_dialogue_ended",
+"type": &"function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "variable",
+"value": "resource"
+}, {
+"type": "colon"
+}, {
+"type": "variable",
+"value": "DialogueResource"
+}])])
+}]),
+"is_blocking": true
+},
+"next_id": "22",
+"type": &"mutation"
+},
+"22": {
+"id": "22",
+"is_snippet": false,
+"next_id": "end",
+"type": &"goto"
+},
+"24": {
+"id": "24",
+"next_id": "26",
+"text": "Escena3",
+"type": &"title"
+},
+"26": {
+"character": "Lía",
+"character_replacements": Array[Dictionary]([]),
+"id": "26",
+"next_id": "27",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "(con voz temblorosa) No me gusta este lugar… ¿Es por aquí donde está la sorpresa?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "(con voz temblorosa) No me gusta este lugar… ¿Es por aquí donde está la sorpresa?",
+"type": &"dialogue"
+},
+"27": {
+"character": "Papá",
+"character_replacements": Array[Dictionary]([]),
+"id": "27",
+"next_id": "28",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "(serio) Sí. No te preocupes, Lía.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "(serio) Sí. No te preocupes, Lía.",
+"type": &"dialogue"
+},
+"28": {
+"character": "Escena",
+"character_replacements": Array[Dictionary]([]),
+"id": "28",
+"next_id": "29",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "De repente, el auto se detiene frente a una mansión enorme, vieja y oscura. Las ventanas parecen ojos que observan en la penumbra.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "De repente, el auto se detiene frente a una mansión enorme, vieja y oscura. Las ventanas parecen ojos que observan en la penumbra.",
+"type": &"dialogue"
+},
+"29": {
+"character": "Lía",
+"character_replacements": Array[Dictionary]([]),
+"id": "29",
+"next_id": "30",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "(asustada) ¡No quiero bajar! ¡Tengo miedo!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "(asustada) ¡No quiero bajar! ¡Tengo miedo!",
+"type": &"dialogue"
+},
+"3": {
+"id": "3",
+"next_id": "5",
+"text": "Escena1",
+"type": &"title"
+},
+"30": {
+"character": "Mamá",
+"character_replacements": Array[Dictionary]([]),
+"id": "30",
+"next_id": "31",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "(en tono firme) Baja del auto, Lía.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "(en tono firme) Baja del auto, Lía.",
+"type": &"dialogue"
+},
+"31": {
+"character": "Lía",
+"character_replacements": Array[Dictionary]([]),
+"id": "31",
+"next_id": "32",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "¡No! ¡No quiero!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "¡No! ¡No quiero!",
+"type": &"dialogue"
+},
+"32": {
+"character": "Escena",
+"character_replacements": Array[Dictionary]([]),
+"id": "32",
+"next_id": "33",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Los padres de Lía bajan y abren la puerta del auto. La toman de los brazos y comienzan a jalarla hacia la mansión.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Los padres de Lía bajan y abren la puerta del auto. La toman de los brazos y comienzan a jalarla hacia la mansión.",
+"type": &"dialogue"
+},
+"33": {
+"character": "Lía",
+"character_replacements": Array[Dictionary]([]),
+"id": "33",
+"next_id": "34",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "(gritando) ¡No! ¡Déjenme! ¡Por favor, no quiero entrar!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "(gritando) ¡No! ¡Déjenme! ¡Por favor, no quiero entrar!",
+"type": &"dialogue"
+},
+"34": {
+"character": "Papá",
+"character_replacements": Array[Dictionary]([]),
+"id": "34",
+"next_id": "35",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "(con voz grave) No hay opción, Lía.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "(con voz grave) No hay opción, Lía.",
+"type": &"dialogue"
+},
+"35": {
+"id": "35",
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "_on_dialogue_ended",
+"type": &"function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "variable",
+"value": "resource"
+}, {
+"type": "colon"
+}, {
+"type": "variable",
+"value": "DialogueResource"
+}])])
+}]),
+"is_blocking": true
+},
+"next_id": "36",
+"type": &"mutation"
+},
+"36": {
+"id": "36",
+"is_snippet": false,
+"next_id": "end",
+"type": &"goto"
+},
+"38": {
+"id": "38",
+"next_id": "40",
+"text": "Escena4",
+"type": &"title"
+},
+"40": {
+"character": "Escena",
+"character_replacements": Array[Dictionary]([]),
+"id": "40",
+"next_id": "41",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Lía patea y forcejea con todas sus fuerzas. En un descuido, logra soltarse y corre hacia la mansión, pero en dirección contraria a sus padres. Llega a una puerta entreabierta y se mete, cerrándola tras de sí.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Lía patea y forcejea con todas sus fuerzas. En un descuido, logra soltarse y corre hacia la mansión, pero en dirección contraria a sus padres. Llega a una puerta entreabierta y se mete, cerrándola tras de sí.",
+"type": &"dialogue"
+},
+"41": {
+"character": "Escena",
+"character_replacements": Array[Dictionary]([]),
+"id": "41",
+"next_id": "42",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Dentro de un cuarto oscuro. Lía respira agitadamente mientras intenta calmarse. Apenas puede ver a su alrededor. La única luz de pequeñas velas y una linterna que encontro.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Dentro de un cuarto oscuro. Lía respira agitadamente mientras intenta calmarse. Apenas puede ver a su alrededor. La única luz de pequeñas velas y una linterna que encontro.",
+"type": &"dialogue"
+},
+"42": {
+"character": "Lía",
+"character_replacements": Array[Dictionary]([]),
+"id": "42",
+"next_id": "43",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "(en susurros) ¿Qué está pasando? ¿Por qué me trajeron aquí?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "(en susurros) ¿Qué está pasando? ¿Por qué me trajeron aquí?",
+"type": &"dialogue"
+},
+"43": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "43",
+"next_id": "44",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "*(De repente, escucha pasos y susurros detrás de la puerta.)",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "*(De repente, escucha pasos y susurros detrás de la puerta.)",
+"type": &"dialogue"
+},
+"44": {
+"character": "Lía",
+"character_replacements": Array[Dictionary]([]),
+"id": "44",
+"next_id": "45",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "(llorando en silencio)",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "(llorando en silencio)",
+"type": &"dialogue"
+},
+"45": {
+"character": "Lía",
+"character_replacements": Array[Dictionary]([]),
+"id": "45",
+"next_id": "46",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "(nota que hay algo más en el cuarto, una sombra que parece moverse por las paredes.)",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "(nota que hay algo más en el cuarto, una sombra que parece moverse por las paredes.)",
+"type": &"dialogue"
+},
+"46": {
+"character": "Lía",
+"character_replacements": Array[Dictionary]([]),
+"id": "46",
+"next_id": "47",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "(en susurros) ¿Hola...? ¿Hay alguien ahí...?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "(en susurros) ¿Hola...? ¿Hay alguien ahí...?",
+"type": &"dialogue"
+},
+"47": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "47",
+"next_id": &"end",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "*(La historia queda en suspenso con Lía atrapada entre el miedo a sus padres y lo desconocido en el cuarto oscuro.)",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "*(La historia queda en suspenso con Lía atrapada entre el miedo a sus padres y lo desconocido en el cuarto oscuro.)",
+"type": &"dialogue"
+},
+"5": {
+"character": "Escena",
+"character_replacements": Array[Dictionary]([]),
+"id": "5",
+"next_id": "6",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Lía está sentada en la mesa con sus padres, terminando la cena.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Lía está sentada en la mesa con sus padres, terminando la cena.",
+"type": &"dialogue"
+},
+"6": {
+"character": "Mamá",
+"character_replacements": Array[Dictionary]([]),
+"id": "6",
+"next_id": "7",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "(sonriendo) Lía, ¿qué te parece si esta noche vamos a dar un paseo?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "(sonriendo) Lía, ¿qué te parece si esta noche vamos a dar un paseo?",
+"type": &"dialogue"
+},
+"7": {
+"character": "Papá",
+"character_replacements": Array[Dictionary]([]),
+"id": "7",
+"next_id": "8",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Sí, cariño, será una sorpresa. Un viaje especial, ¿te gustaría?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Sí, cariño, será una sorpresa. Un viaje especial, ¿te gustaría?",
+"type": &"dialogue"
+},
+"8": {
+"character": "Lía",
+"character_replacements": Array[Dictionary]([]),
+"id": "8",
+"next_id": "9",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "(mirando emocionada) ¿De verdad? ¡Sí! ¿A dónde vamos?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "(mirando emocionada) ¿De verdad? ¡Sí! ¿A dónde vamos?",
+"type": &"dialogue"
+},
+"9": {
+"character": "Mamá",
+"character_replacements": Array[Dictionary]([]),
+"id": "9",
+"next_id": "10",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Es un secreto. Pero estoy segura de que te va a encantar.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Es un secreto. Pero estoy segura de que te va a encantar.",
+"type": &"dialogue"
+}
+}
+raw_text = "
+
+~ Escena1
+
+Escena: Lía está sentada en la mesa con sus padres, terminando la cena.
+Mamá: (sonriendo) Lía, ¿qué te parece si esta noche vamos a dar un paseo?
+Papá: Sí, cariño, será una sorpresa. Un viaje especial, ¿te gustaría?
+Lía: (mirando emocionada) ¿De verdad? ¡Sí! ¿A dónde vamos?
+Mamá: Es un secreto. Pero estoy segura de que te va a encantar.
+Escena: (Lía sonríe, emocionada por lo que le espera. Más tarde, todos suben al auto.)
+do _on_dialogue_ended(resource: DialogueResource)
+=> END
+
+~ Escena2
+
+Escena: Durante el trayecto en auto. Lía mira por la ventana. Todo es oscuro, y apenas hay luces en el camino.
+Lía: (un poco preocupada) Mami, papi... ¿por qué todo está tan oscuro? ¿A dónde vamos?
+Papá: No te preocupes, Lía. Ya casi llegamos.
+Mamá: Confía en nosotros, amor.
+Escena: El auto se desvía por un camino rodeado de árboles. La carretera es estrecha y tenebrosa. Lía siente un escalofrío.
+do _on_dialogue_ended(resource: DialogueResource)
+=> END
+
+~ Escena3
+
+Lía: (con voz temblorosa) No me gusta este lugar… ¿Es por aquí donde está la sorpresa?
+Papá: (serio) Sí. No te preocupes, Lía.
+Escena: De repente, el auto se detiene frente a una mansión enorme, vieja y oscura. Las ventanas parecen ojos que observan en la penumbra.
+Lía: (asustada) ¡No quiero bajar! ¡Tengo miedo!
+Mamá: (en tono firme) Baja del auto, Lía.
+Lía: ¡No! ¡No quiero!
+Escena: Los padres de Lía bajan y abren la puerta del auto. La toman de los brazos y comienzan a jalarla hacia la mansión.
+Lía: (gritando) ¡No! ¡Déjenme! ¡Por favor, no quiero entrar!
+Papá: (con voz grave) No hay opción, Lía.
+do _on_dialogue_ended(resource: DialogueResource)
+=> END
+
+~ Escena4
+
+Escena: Lía patea y forcejea con todas sus fuerzas. En un descuido, logra soltarse y corre hacia la mansión, pero en dirección contraria a sus padres. Llega a una puerta entreabierta y se mete, cerrándola tras de sí.
+Escena: Dentro de un cuarto oscuro. Lía respira agitadamente mientras intenta calmarse. Apenas puede ver a su alrededor. La única luz de pequeñas velas y una linterna que encontro.
+Lía: (en susurros) ¿Qué está pasando? ¿Por qué me trajeron aquí?
+*(De repente, escucha pasos y susurros detrás de la puerta.)
+Lía: (llorando en silencio) 
+Lía: (nota que hay algo más en el cuarto, una sombra que parece moverse por las paredes.)
+Lía: (en susurros) ¿Hola...? ¿Hay alguien ahí...?
+*(La historia queda en suspenso con Lía atrapada entre el miedo a sus padres y lo desconocido en el cuarto oscuro.)"
+metadata/dialogue_manager_version = "2.44.0"

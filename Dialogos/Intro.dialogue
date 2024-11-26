@@ -1,0 +1,47 @@
+
+
+~ Escena1
+
+Escena: Lía está sentada en la mesa con sus padres, terminando la cena.
+Mamá: (sonriendo) Lía, ¿qué te parece si esta noche vamos a dar un paseo?
+Papá: Sí, cariño, será una sorpresa. Un viaje especial, ¿te gustaría?
+Lía: (mirando emocionada) ¿De verdad? ¡Sí! ¿A dónde vamos?
+Mamá: Es un secreto. Pero estoy segura de que te va a encantar.
+Escena: (Lía sonríe, emocionada por lo que le espera. Más tarde, todos suben al auto.)
+do _on_dialogue_ended(resource: DialogueResource)
+=> END
+
+~ Escena2
+
+Escena: Durante el trayecto en auto. Lía mira por la ventana. Todo es oscuro, y apenas hay luces en el camino.
+Lía: (un poco preocupada) Mami, papi... ¿por qué todo está tan oscuro? ¿A dónde vamos?
+Papá: No te preocupes, Lía. Ya casi llegamos.
+Mamá: Confía en nosotros, amor.
+Escena: El auto se desvía por un camino rodeado de árboles. La carretera es estrecha y tenebrosa. Lía siente un escalofrío.
+do _on_dialogue_ended(resource: DialogueResource)
+=> END
+
+~ Escena3
+
+Lía: (con voz temblorosa) No me gusta este lugar… ¿Es por aquí donde está la sorpresa?
+Papá: (serio) Sí. No te preocupes, Lía.
+Escena: De repente, el auto se detiene frente a una mansión enorme, vieja y oscura. Las ventanas parecen ojos que observan en la penumbra.
+Lía: (asustada) ¡No quiero bajar! ¡Tengo miedo!
+Mamá: (en tono firme) Baja del auto, Lía.
+Lía: ¡No! ¡No quiero!
+Escena: Los padres de Lía bajan y abren la puerta del auto. La toman de los brazos y comienzan a jalarla hacia la mansión.
+Lía: (gritando) ¡No! ¡Déjenme! ¡Por favor, no quiero entrar!
+Papá: (con voz grave) No hay opción, Lía.
+do _on_dialogue_ended(resource: DialogueResource)
+=> END
+
+~ Escena4
+
+Escena: Lía patea y forcejea con todas sus fuerzas. En un descuido, logra soltarse y corre hacia la mansión, pero en dirección contraria a sus padres. Llega a una puerta entreabierta y se mete, cerrándola tras de sí.
+Escena: Dentro de un cuarto oscuro. Lía respira agitadamente mientras intenta calmarse. Apenas puede ver a su alrededor. La única luz de pequeñas velas y una linterna que encontro.
+Lía: (en susurros) ¿Qué está pasando? ¿Por qué me trajeron aquí?
+*(De repente, escucha pasos y susurros detrás de la puerta.)
+Lía: (llorando en silencio) 
+Lía: (nota que hay algo más en el cuarto, una sombra que parece moverse por las paredes.)
+Lía: (en susurros) ¿Hola...? ¿Hay alguien ahí...?
+*(La historia queda en suspenso con Lía atrapada entre el miedo a sus padres y lo desconocido en el cuarto oscuro.)
