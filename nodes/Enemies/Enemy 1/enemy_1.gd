@@ -79,11 +79,11 @@ func dirigirse() -> void:
 	
 	if dist_nd_der > dist_nd_izq:
 		objetivo = player.pos_izq.global_position
-		print("Dirigirse izquierda")
+		#print("Dirigirse izquierda")
 		
 	if dist_nd_izq > dist_nd_der:
 		objetivo = player.pos_der.global_position
-		print("Dirigirse derecha")
+		#print("Dirigirse derecha")
 
 func makepaht() -> void:
 	dir = self.global_position.direction_to(objetivo)

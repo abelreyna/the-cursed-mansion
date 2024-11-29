@@ -1,4 +1,4 @@
-[gd_scene load_steps=134 format=3 uid="uid://drt58mt48yk0g"]
+[gd_scene load_steps=137 format=3 uid="uid://drt58mt48yk0g"]
 
 [ext_resource type="Script" path="res://nodes/Character/main_character.gd" id="1_5tico"]
 [ext_resource type="Texture2D" uid="uid://dh12ye7g8p1yo" path="res://Assets/Niña/Idle/idle_down.png" id="1_hbwp7"]
@@ -19,6 +19,8 @@
 [ext_resource type="Texture2D" uid="uid://cupe45rtva156" path="res://Assets/Niña/Walk_with_flashlight/walk_right_down_withflashlight.png" id="11_rihhf"]
 [ext_resource type="Texture2D" uid="uid://cf4y5nlbhmhp0" path="res://Assets/Niña/Walk_with_flashlight/walk_up_withflashlight.png" id="12_6813x"]
 [ext_resource type="AudioStream" uid="uid://cahv2inj850ui" path="res://Assets/Sounds/Flashlight/Flashlight off.wav" id="12_qg4rg"]
+[ext_resource type="Script" path="res://Script/point_light_2d.gd" id="17_d68ub"]
+[ext_resource type="Script" path="res://Script/health_component.gd" id="20_7u3p5"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p4eos"]
 radius = 48.0
@@ -881,10 +883,16 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jjp1r"]
+radius = 47.0
+height = 152.0
+
 [node name="Character_main" type="CharacterBody2D"]
 position = Vector2(0, -2)
 collision_mask = 3
 script = ExtResource("1_5tico")
+
+[node name="Timer" type="Timer" parent="."]
 
 [node name="der" type="Node2D" parent="."]
 position = Vector2(100, 0)
@@ -906,6 +914,7 @@ animation = &"walk_right_down_light"
 scale = Vector2(2.02841, 2.02841)
 color = Color(0.875377, 0.608962, 7.70092e-07, 0.686275)
 texture = ExtResource("9_f8h0f")
+script = ExtResource("17_d68ub")
 
 [node name="AudioWalk" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("10_6k7tx")
@@ -916,3 +925,15 @@ stream = ExtResource("11_q26q1")
 
 [node name="AudioLightOff" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("12_qg4rg")
+
+[node name="HealthComponent" type="Area2D" parent="."]
+collision_mask = 0
+script = ExtResource("20_7u3p5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HealthComponent"]
+position = Vector2(-1, -27)
+shape = SubResource("CapsuleShape2D_jjp1r")
+
+[connection signal="onDamagetook" from="HealthComponent" to="." method="_on_health_component_on_damagetook"]
+[connection signal="onDead" from="HealthComponent" to="." method="_on_health_component_on_dead"]
+[connection signal="onHealthChange" from="HealthComponent" to="." method="_on_health_component_on_health_change"]

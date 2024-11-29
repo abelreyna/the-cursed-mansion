@@ -1,5 +1,6 @@
-[gd_scene load_steps=74 format=3 uid="uid://3pcsx1nk5dk0"]
+[gd_scene load_steps=73 format=3 uid="uid://3pcsx1nk5dk0"]
 
+[ext_resource type="PackedScene" uid="uid://pvoflxulo04h" path="res://Abel - recursos/Barras_1/info_barras.tscn" id="1_qp5bm"]
 [ext_resource type="PackedScene" uid="uid://drt58mt48yk0g" path="res://nodes/Character/main_character.tscn" id="1_yjgeo"]
 [ext_resource type="Texture2D" uid="uid://bp5hs8hji4y4s" path="res://suelo/decorative.png" id="5_mcgor"]
 [ext_resource type="Texture2D" uid="uid://cenk5sg6wdayo" path="res://suelo/piso 2.png" id="6_dslpa"]
@@ -73,14 +74,10 @@
 
 [sub_resource type="MeshTexture" id="MeshTexture_7px7q"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_470p4"]
-bg_color = Color(0.129, 0.129, 0.86, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x1exg"]
-bg_color = Color(0.6, 0.174, 0.174, 1)
-
 [node name="scena_1" type="Node2D"]
 position = Vector2(171, 316)
+
+[node name="Info_barras" parent="." instance=ExtResource("1_qp5bm")]
 
 [node name="Fondo_1" type="Node2D" parent="."]
 position = Vector2(54, 108)
@@ -3617,19 +3614,257 @@ position = Vector2(2416, 6587)
 scale = Vector2(4.53646, 4.34687)
 texture = ExtResource("25_epsks")
 
+[node name="Fondo_2" type="Node2D" parent="."]
+
+[node name="InfernusBrasero" type="Sprite2D" parent="Fondo_2"]
+position = Vector2(3417, 6100)
+scale = Vector2(8.07813, 8.3125)
+texture = ExtResource("27_hs8m6")
+
+[node name="InfernusHangingCorpse23" type="Sprite2D" parent="Fondo_2"]
+position = Vector2(3664, 6849)
+scale = Vector2(5.01042, 5.60547)
+texture = ExtResource("30_2p53c")
+
+[node name="InfernusSkull41" type="Sprite2D" parent="Fondo_2"]
+position = Vector2(3251, 6935)
+scale = Vector2(6.64063, 6.90626)
+texture = ExtResource("41_8xa6s")
+
+[node name="Mainlevbuild(8)" type="Sprite2D" parent="Fondo_2"]
+position = Vector2(2209, 5581)
+scale = Vector2(5.84615, 5.64103)
+texture = ExtResource("26_remdb")
+
+[node name="InfernusBones12" type="Sprite2D" parent="Fondo_2"]
+position = Vector2(2730.25, 5679)
+scale = Vector2(3.82813, 4.85416)
+texture = ExtResource("28_s6d12")
+
+[node name="Mainlevbuild(19)" type="Sprite2D" parent="Fondo_2"]
+position = Vector2(4459, 4735)
+scale = Vector2(9.89216, 6.96914)
+texture = ExtResource("29_cf0iy")
+
+[node name="InfernusVase" type="Sprite2D" parent="Fondo_2"]
+position = Vector2(4500, 6179)
+scale = Vector2(10.1875, 10.9375)
+texture = ExtResource("42_k5sby")
+
+[node name="BonesShadow33" type="Sprite2D" parent="Fondo_2"]
+position = Vector2(4436, 4564.75)
+scale = Vector2(8.3125, 6.20314)
+texture = ExtResource("43_yalks")
+
+[node name="BonesShadow28" type="Sprite2D" parent="Fondo_2"]
+position = Vector2(2477, 2079)
+scale = Vector2(5.13281, 6.19531)
+texture = ExtResource("44_gvm5q")
+
+[node name="BonesShadow210" type="Sprite2D" parent="Fondo_2"]
+position = Vector2(2269.5, 2081.25)
+scale = Vector2(6.07813, 6.55468)
+texture = ExtResource("45_bhivu")
+
+[node name="GraveShadow14" type="Sprite2D" parent="Fondo_2"]
+visible = false
+position = Vector2(3046, 3937)
+scale = Vector2(10.4375, 9.25)
+texture = ExtResource("46_y3vqa")
+
+[node name="GraveShadow16" type="Sprite2D" parent="Fondo_2"]
+visible = false
+position = Vector2(3423, 3928)
+scale = Vector2(10.6563, 11.6094)
+texture = ExtResource("47_lcp7r")
+
+[node name="InfernusBust13" type="Sprite2D" parent="Fondo_2"]
+position = Vector2(3339, 3561)
+scale = Vector2(6.89583, 7.91667)
+texture = ExtResource("48_nkg1n")
+
+[node name="InfernusSkull42" type="Sprite2D" parent="Fondo_2"]
+position = Vector2(4052, 3762)
+scale = Vector2(8.09375, 8.3125)
+texture = ExtResource("41_8xa6s")
+
+[node name="InfernusPillar2" type="Sprite2D" parent="Fondo_2"]
+position = Vector2(-101, 4460)
+scale = Vector2(8.54688, 7.76042)
+texture = ExtResource("49_wlrxp")
+
+[node name="BonesShadow31" type="Sprite2D" parent="Fondo_2"]
+position = Vector2(-7, 4669)
+scale = Vector2(11.625, 9.73438)
+texture = ExtResource("35_hks5v")
+
+[node name="DeadArmShadow11" type="Sprite2D" parent="Fondo_2"]
+position = Vector2(4917, 4362)
+scale = Vector2(3.93749, 4.53907)
+texture = ExtResource("31_l2kau")
+
+[node name="DeadArmShadow12" type="Sprite2D" parent="Fondo_2"]
+position = Vector2(7235, 4437)
+scale = Vector2(5.125, 6.42188)
+texture = ExtResource("32_m65tj")
+
+[node name="DeadArmShadow33" type="Sprite2D" parent="Fondo_2"]
+position = Vector2(7514, 6978)
+scale = Vector2(4.89063, 7.25)
+texture = ExtResource("33_v2ulk")
+
+[node name="DeadTreeShadow11" type="Sprite2D" parent="Fondo_2"]
+position = Vector2(5283, 6702)
+scale = Vector2(9.01953, 8.30859)
+texture = ExtResource("50_8kh2i")
+
+[node name="InfernusFloorDecal" type="Sprite2D" parent="Fondo_2"]
+position = Vector2(6424, 5501)
+scale = Vector2(9.14063, 8.25781)
+texture = ExtResource("51_aa2vi")
+
+[node name="InfernusBook24" type="Sprite2D" parent="Fondo_2"]
+position = Vector2(6443, 5466)
+scale = Vector2(7.25, 4.78125)
+texture = ExtResource("38_il6ft")
+
+[node name="InfernusSkull43" type="Sprite2D" parent="Fondo_2"]
+position = Vector2(6152, 5495)
+scale = Vector2(9.5, 10.4375)
+texture = ExtResource("52_v4jtu")
+
+[node name="InfernusSkull44" type="Sprite2D" parent="Fondo_2"]
+position = Vector2(6756, 5480)
+scale = Vector2(9.5, 9.5)
+texture = ExtResource("41_8xa6s")
+
+[node name="InfernusReliquary1" type="Sprite2D" parent="Fondo_2"]
+position = Vector2(6254, 6975)
+scale = Vector2(8.89843, 8.07813)
+texture = ExtResource("53_rx0vb")
+
+[node name="InfernusReliquary1" type="Sprite2D" parent="Fondo_2/InfernusReliquary1"]
+visible = false
+position = Vector2(6254, 6975)
+scale = Vector2(8.89843, 8.07813)
+texture = ExtResource("53_rx0vb")
+
+[node name="LichShadow1" type="Sprite2D" parent="Fondo_2"]
+position = Vector2(5276, 1199)
+scale = Vector2(3.47656, 3.44922)
+texture = ExtResource("54_cdrb1")
+
+[node name="Decorative" type="Sprite2D" parent="Fondo_2"]
+position = Vector2(5287, 893)
+scale = Vector2(16.6395, 9.03125)
+texture = ExtResource("5_mcgor")
+
+[node name="InfernusLectern17" type="Sprite2D" parent="Fondo_2"]
+position = Vector2(7949, 985)
+scale = Vector2(12.5625, 8.08333)
+texture = ExtResource("55_vto44")
+
+[node name="InfernusBurnerColumn3" type="Sprite2D" parent="Fondo_2"]
+position = Vector2(4922, 617)
+scale = Vector2(3.36458, 3.78438)
+texture = ExtResource("25_epsks")
+
+[node name="InfernusHellscapeBrokenGiant1" type="Sprite2D" parent="Fondo_2"]
+position = Vector2(7745, 1925)
+scale = Vector2(1.63879, 1.59082)
+texture = ExtResource("56_wlj6s")
+
+[node name="InfernusBones13" type="Sprite2D" parent="Fondo_2"]
+position = Vector2(4955, 2096)
+scale = Vector2(4.45833, 4.85417)
+texture = ExtResource("28_s6d12")
+
+[node name="InfernusTable2" type="Sprite2D" parent="Fondo_2"]
+position = Vector2(10308, 5625)
+scale = Vector2(10.125, 6.54688)
+texture = ExtResource("58_2po6r")
+
+[node name="InfernusCandelabra1" type="Sprite2D" parent="Fondo_2"]
+position = Vector2(10879, 5372)
+scale = Vector2(7.48438, 7.05208)
+texture = ExtResource("59_4r8p0")
+
+[node name="InfernusCandelabra2" type="Sprite2D" parent="Fondo_2"]
+position = Vector2(9893, 5375)
+scale = Vector2(6.1875, 7.13542)
+texture = ExtResource("60_7i3mg")
+
+[node name="InfernusFloatingIsle2" type="Sprite2D" parent="Fondo_2"]
+position = Vector2(10258, 5377)
+texture = ExtResource("61_w1tv1")
+
+[node name="InfernusFloatingIsle3" type="Sprite2D" parent="Fondo_2"]
+position = Vector2(10543, 5481)
+texture = ExtResource("62_154t8")
+
+[node name="InfernusFloatingIsle4" type="Sprite2D" parent="Fondo_2"]
+position = Vector2(10052, 5557)
+texture = ExtResource("63_kvvrf")
+
+[node name="InfernusFloatingIsle5" type="Sprite2D" parent="Fondo_2"]
+position = Vector2(10380, 5691)
+texture = ExtResource("64_byng6")
+
+[node name="InfernusSkull45" type="Sprite2D" parent="Fondo_2"]
+position = Vector2(10297, 5482)
+scale = Vector2(7.84375, 8.5625)
+texture = ExtResource("41_8xa6s")
+
+[node name="InfernusCrater" type="Sprite2D" parent="Fondo_2"]
+position = Vector2(9848, 4679)
+scale = Vector2(0.825231, 0.76375)
+texture = ExtResource("65_md8lf")
+
+[node name="InfernusCorpse16" type="Sprite2D" parent="Fondo_2"]
+position = Vector2(11611, 5754)
+scale = Vector2(6.01563, 6.1875)
+texture = ExtResource("66_wvjmd")
+
+[node name="InfernusCabinet33" type="Sprite2D" parent="Fondo_2"]
+position = Vector2(8885, 4143)
+scale = Vector2(6.96094, 6.425)
+texture = ExtResource("67_qyhqp")
+
+[node name="InfernusBurner" type="Sprite2D" parent="Fondo_2"]
+position = Vector2(11177, 4908)
+scale = Vector2(6.65624, 5.25)
+texture = ExtResource("36_rdqm3")
+
+[node name="InfernusAltar6" type="Sprite2D" parent="Fondo_2"]
+position = Vector2(11626, 5174)
+scale = Vector2(6.425, 5.71875)
+texture = ExtResource("68_hutp7")
+
+[node name="InfernusGorePile5" type="Sprite2D" parent="Fondo_2"]
+position = Vector2(9829, 4663)
+scale = Vector2(3.5, 3.12188)
+texture = ExtResource("69_d888e")
+
+[node name="InfernusPillar3" type="Sprite2D" parent="Fondo_2"]
+position = Vector2(12016, 4203)
+scale = Vector2(6.65625, 8.94792)
+texture = ExtResource("49_wlrxp")
+
+[node name="BonesShadow29" type="Sprite2D" parent="Fondo_2"]
+visible = false
+position = Vector2(9240, 5758)
+scale = Vector2(6.3125, 7.71875)
+texture = ExtResource("44_gvm5q")
+
+[node name="InfernusBook13" type="Sprite2D" parent="Fondo_2"]
+position = Vector2(9572, 4705)
+scale = Vector2(5.35938, 5.25)
+texture = ExtResource("70_r51bt")
+
 [node name="Character_main" parent="." instance=ExtResource("1_yjgeo")]
 position = Vector2(-750, 2556)
 scale = Vector2(1.5, 1.5)
-
-[node name="BarraDeCordura" type="ProgressBar" parent="Character_main"]
-offset_left = -236.667
-offset_top = -423.333
-offset_right = 37.3333
-offset_bottom = -350.333
-theme_override_colors/font_color = Color(0.870588, 0, 0, 0.0941176)
-theme_override_styles/background = SubResource("StyleBoxFlat_470p4")
-theme_override_styles/fill = SubResource("StyleBoxFlat_x1exg")
-value = 80.0
+collision_mask = 2
 
 [node name="Camera2D" type="Camera2D" parent="Character_main"]
 position = Vector2(19.9998, -40.0004)
@@ -3638,6 +3873,8 @@ zoom = Vector2(0.5, 0.5)
 [node name="Enemy_1" parent="." node_paths=PackedStringArray("player") instance=ExtResource("6_sy0r2")]
 position = Vector2(-154, 2546)
 scale = Vector2(4.5, 4.5)
+collision_layer = 2
+collision_mask = 1
 player = NodePath("../Character_main")
 
 [node name="Enemy_2" parent="." node_paths=PackedStringArray("player") instance=ExtResource("6_sy0r2")]
@@ -3652,7 +3889,6 @@ scale = Vector2(6.69928, 9.95779)
 texture = ExtResource("16_8jivg")
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
-visible = false
 position = Vector2(26, 2614)
 color = Color(0.41598, 0.41598, 0.41598, 1)
 energy = 2.25
@@ -3660,247 +3896,5 @@ blend_mode = 1
 
 [node name="AmbientAudio" type="AudioStreamPlayer" parent="."]
 
-[node name="InfernusBrasero" type="Sprite2D" parent="."]
-position = Vector2(3417, 6100)
-scale = Vector2(8.07813, 8.3125)
-texture = ExtResource("27_hs8m6")
-
-[node name="InfernusHangingCorpse23" type="Sprite2D" parent="."]
-position = Vector2(3664, 6849)
-scale = Vector2(5.01042, 5.60547)
-texture = ExtResource("30_2p53c")
-
-[node name="InfernusSkull41" type="Sprite2D" parent="."]
-position = Vector2(3251, 6935)
-scale = Vector2(6.64063, 6.90626)
-texture = ExtResource("41_8xa6s")
-
-[node name="Mainlevbuild(8)" type="Sprite2D" parent="."]
-position = Vector2(2209, 5581)
-scale = Vector2(5.84615, 5.64103)
-texture = ExtResource("26_remdb")
-
-[node name="InfernusBones12" type="Sprite2D" parent="."]
-position = Vector2(2730.25, 5679)
-scale = Vector2(3.82813, 4.85416)
-texture = ExtResource("28_s6d12")
-
-[node name="Mainlevbuild(19)" type="Sprite2D" parent="."]
-position = Vector2(4459, 4735)
-scale = Vector2(9.89216, 6.96914)
-texture = ExtResource("29_cf0iy")
-
-[node name="InfernusVase" type="Sprite2D" parent="."]
-position = Vector2(4500, 6179)
-scale = Vector2(10.1875, 10.9375)
-texture = ExtResource("42_k5sby")
-
-[node name="BonesShadow33" type="Sprite2D" parent="."]
-position = Vector2(4436, 4564.75)
-scale = Vector2(8.3125, 6.20314)
-texture = ExtResource("43_yalks")
-
-[node name="BonesShadow28" type="Sprite2D" parent="."]
-position = Vector2(2477, 2079)
-scale = Vector2(5.13281, 6.19531)
-texture = ExtResource("44_gvm5q")
-
-[node name="BonesShadow210" type="Sprite2D" parent="."]
-position = Vector2(2269.5, 2081.25)
-scale = Vector2(6.07813, 6.55468)
-texture = ExtResource("45_bhivu")
-
-[node name="GraveShadow14" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(3046, 3937)
-scale = Vector2(10.4375, 9.25)
-texture = ExtResource("46_y3vqa")
-
-[node name="GraveShadow16" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(3423, 3928)
-scale = Vector2(10.6563, 11.6094)
-texture = ExtResource("47_lcp7r")
-
-[node name="InfernusBust13" type="Sprite2D" parent="."]
-position = Vector2(3339, 3561)
-scale = Vector2(6.89583, 7.91667)
-texture = ExtResource("48_nkg1n")
-
-[node name="InfernusSkull42" type="Sprite2D" parent="."]
-position = Vector2(4052, 3762)
-scale = Vector2(8.09375, 8.3125)
-texture = ExtResource("41_8xa6s")
-
-[node name="InfernusPillar2" type="Sprite2D" parent="."]
-position = Vector2(-101, 4460)
-scale = Vector2(8.54688, 7.76042)
-texture = ExtResource("49_wlrxp")
-
-[node name="BonesShadow31" type="Sprite2D" parent="."]
-position = Vector2(-7, 4669)
-scale = Vector2(11.625, 9.73438)
-texture = ExtResource("35_hks5v")
-
-[node name="DeadArmShadow11" type="Sprite2D" parent="."]
-position = Vector2(4917, 4362)
-scale = Vector2(3.93749, 4.53907)
-texture = ExtResource("31_l2kau")
-
-[node name="DeadArmShadow12" type="Sprite2D" parent="."]
-position = Vector2(7235, 4437)
-scale = Vector2(5.125, 6.42188)
-texture = ExtResource("32_m65tj")
-
-[node name="DeadArmShadow33" type="Sprite2D" parent="."]
-position = Vector2(7514, 6978)
-scale = Vector2(4.89063, 7.25)
-texture = ExtResource("33_v2ulk")
-
-[node name="DeadTreeShadow11" type="Sprite2D" parent="."]
-position = Vector2(5283, 6702)
-scale = Vector2(9.01953, 8.30859)
-texture = ExtResource("50_8kh2i")
-
-[node name="InfernusFloorDecal" type="Sprite2D" parent="."]
-position = Vector2(6424, 5501)
-scale = Vector2(9.14063, 8.25781)
-texture = ExtResource("51_aa2vi")
-
-[node name="InfernusBook24" type="Sprite2D" parent="."]
-position = Vector2(6443, 5466)
-scale = Vector2(7.25, 4.78125)
-texture = ExtResource("38_il6ft")
-
-[node name="InfernusSkull43" type="Sprite2D" parent="."]
-position = Vector2(6152, 5495)
-scale = Vector2(9.5, 10.4375)
-texture = ExtResource("52_v4jtu")
-
-[node name="InfernusSkull44" type="Sprite2D" parent="."]
-position = Vector2(6756, 5480)
-scale = Vector2(9.5, 9.5)
-texture = ExtResource("41_8xa6s")
-
-[node name="InfernusReliquary1" type="Sprite2D" parent="."]
-position = Vector2(6254, 6975)
-scale = Vector2(8.89843, 8.07813)
-texture = ExtResource("53_rx0vb")
-
-[node name="InfernusReliquary1" type="Sprite2D" parent="InfernusReliquary1"]
-visible = false
-position = Vector2(6254, 6975)
-scale = Vector2(8.89843, 8.07813)
-texture = ExtResource("53_rx0vb")
-
-[node name="LichShadow1" type="Sprite2D" parent="."]
-position = Vector2(5276, 1199)
-scale = Vector2(3.47656, 3.44922)
-texture = ExtResource("54_cdrb1")
-
-[node name="Decorative" type="Sprite2D" parent="."]
-position = Vector2(5287, 893)
-scale = Vector2(16.6395, 9.03125)
-texture = ExtResource("5_mcgor")
-
-[node name="InfernusLectern17" type="Sprite2D" parent="."]
-position = Vector2(7949, 985)
-scale = Vector2(12.5625, 8.08333)
-texture = ExtResource("55_vto44")
-
-[node name="InfernusBurnerColumn3" type="Sprite2D" parent="."]
-position = Vector2(4922, 617)
-scale = Vector2(3.36458, 3.78438)
-texture = ExtResource("25_epsks")
-
-[node name="InfernusHellscapeBrokenGiant1" type="Sprite2D" parent="."]
-position = Vector2(7745, 1925)
-scale = Vector2(1.63879, 1.59082)
-texture = ExtResource("56_wlj6s")
-
-[node name="InfernusBones13" type="Sprite2D" parent="."]
-position = Vector2(4955, 2096)
-scale = Vector2(4.45833, 4.85417)
-texture = ExtResource("28_s6d12")
-
-[node name="InfernusTable2" type="Sprite2D" parent="."]
-position = Vector2(10308, 5625)
-scale = Vector2(10.125, 6.54688)
-texture = ExtResource("58_2po6r")
-
-[node name="InfernusCandelabra1" type="Sprite2D" parent="."]
-position = Vector2(10879, 5372)
-scale = Vector2(7.48438, 7.05208)
-texture = ExtResource("59_4r8p0")
-
-[node name="InfernusCandelabra2" type="Sprite2D" parent="."]
-position = Vector2(9893, 5375)
-scale = Vector2(6.1875, 7.13542)
-texture = ExtResource("60_7i3mg")
-
-[node name="InfernusFloatingIsle2" type="Sprite2D" parent="."]
-position = Vector2(10258, 5377)
-texture = ExtResource("61_w1tv1")
-
-[node name="InfernusFloatingIsle3" type="Sprite2D" parent="."]
-position = Vector2(10543, 5481)
-texture = ExtResource("62_154t8")
-
-[node name="InfernusFloatingIsle4" type="Sprite2D" parent="."]
-position = Vector2(10052, 5557)
-texture = ExtResource("63_kvvrf")
-
-[node name="InfernusFloatingIsle5" type="Sprite2D" parent="."]
-position = Vector2(10380, 5691)
-texture = ExtResource("64_byng6")
-
-[node name="InfernusSkull45" type="Sprite2D" parent="."]
-position = Vector2(10297, 5482)
-scale = Vector2(7.84375, 8.5625)
-texture = ExtResource("41_8xa6s")
-
-[node name="InfernusCrater" type="Sprite2D" parent="."]
-position = Vector2(9848, 4679)
-scale = Vector2(0.825231, 0.76375)
-texture = ExtResource("65_md8lf")
-
-[node name="InfernusCorpse16" type="Sprite2D" parent="."]
-position = Vector2(11611, 5754)
-scale = Vector2(6.01563, 6.1875)
-texture = ExtResource("66_wvjmd")
-
-[node name="InfernusCabinet33" type="Sprite2D" parent="."]
-position = Vector2(8885, 4143)
-scale = Vector2(6.96094, 6.425)
-texture = ExtResource("67_qyhqp")
-
-[node name="InfernusBurner" type="Sprite2D" parent="."]
-position = Vector2(11177, 4908)
-scale = Vector2(6.65624, 5.25)
-texture = ExtResource("36_rdqm3")
-
-[node name="InfernusAltar6" type="Sprite2D" parent="."]
-position = Vector2(11626, 5174)
-scale = Vector2(6.425, 5.71875)
-texture = ExtResource("68_hutp7")
-
-[node name="InfernusGorePile5" type="Sprite2D" parent="."]
-position = Vector2(9829, 4663)
-scale = Vector2(3.5, 3.12188)
-texture = ExtResource("69_d888e")
-
-[node name="InfernusPillar3" type="Sprite2D" parent="."]
-position = Vector2(12016, 4203)
-scale = Vector2(6.65625, 8.94792)
-texture = ExtResource("49_wlrxp")
-
-[node name="BonesShadow29" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(9240, 5758)
-scale = Vector2(6.3125, 7.71875)
-texture = ExtResource("44_gvm5q")
-
-[node name="InfernusBook13" type="Sprite2D" parent="."]
-position = Vector2(9572, 4705)
-scale = Vector2(5.35938, 5.25)
-texture = ExtResource("70_r51bt")
+[connection signal="barra" from="Character_main" to="Info_barras" method="_on_character_main_barra"]
+[connection signal="barraEnergia" from="Character_main" to="Info_barras" method="_on_character_main_barra_energia"]

@@ -1,2 +1,11 @@
-res://Salas/Intro.tscn
 res://Salas/scena_1.tscn
+res://Salas/Intro.tscn
+res://Abel - recursos/Barras_1/info_barras.tscn
+res://nodes/Character/main_character.tscn
+res://Script/health_component.gd
+res://nodes/Enemies/Enemy 1/enemy_1.tscn
+res://Script/hitbox_component.gd
+res://nodes/Character/main_character.gd
+res://Script/info_barras.gd
+res://nodes/Enemies/Enemy 1/enemy_1.gd
+res://Script/point_light_2d.gd

@@ -1,10 +1,11 @@
-[gd_scene load_steps=31 format=3 uid="uid://ce7u5u0igniun"]
+[gd_scene load_steps=33 format=3 uid="uid://ce7u5u0igniun"]
 
 [ext_resource type="Texture2D" uid="uid://dotixs3xvpc7t" path="res://nodes/Enemies/Enemy 1/AnimationSheet_Character.png" id="1_ahbm4"]
 [ext_resource type="Script" path="res://nodes/Enemies/Enemy 1/enemy_1.gd" id="1_bpv33"]
 [ext_resource type="AudioStream" uid="uid://dkgar4veema6k" path="res://Assets/Sounds/Walking/stone_01_d.wav" id="3_xyvs7"]
 [ext_resource type="AudioStream" uid="uid://tm4js8bmmtvl" path="res://Assets/Sounds/Terror/chase-180774.mp3" id="4_gk61i"]
 [ext_resource type="AudioStream" uid="uid://ccgr2wqg67uwt" path="res://Assets/Sounds/Terror/danger-203290.mp3" id="5_x6ohy"]
+[ext_resource type="Script" path="res://Script/hitbox_component.gd" id="6_1g0sw"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xeqv1"]
 radius = 8.2
@@ -186,6 +187,10 @@ radius = 149.741
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xgo61"]
 size = Vector2(46.7, 13.3)
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_w7dq5"]
+radius = 26.0
+height = 53.6
+
 [node name="Enemy_1" type="CharacterBody2D"]
 scale = Vector2(2.5, 2.5)
 collision_mask = 3
@@ -233,6 +238,13 @@ volume_db = -22.286
 [node name="Terror2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_x6ohy")
 volume_db = -21.048
+
+[node name="HitboxComponent" type="Area2D" parent="."]
+collision_layer = 2
+script = ExtResource("6_1g0sw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxComponent"]
+shape = SubResource("CapsuleShape2D_w7dq5")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="body_entered" from="VisiónRange" to="." method="_on_area_2d_body_entered"]
