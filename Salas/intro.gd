@@ -51,3 +51,6 @@ func _on_dialogue_ended(resource: DialogueResource):
 	print("Diálogo finalizado. Cambiando a la siguiente escena.")
 	current_scene_index += 1
 	play_scene(current_scene_index)
+
+func change_scene():
+	get_tree().change_scene_to_file("res://Salas/scena_1.tscn")

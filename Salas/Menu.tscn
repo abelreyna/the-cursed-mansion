@@ -1,0 +1,115 @@
+[gd_scene load_steps=11 format=3 uid="uid://cjfh0atfyxj8k"]
+
+[ext_resource type="Texture2D" uid="uid://cnhk80jc1xo8s" path="res://Assets/sr2abe4df4d20aws3-export.png" id="1_81qgk"]
+[ext_resource type="Script" path="res://Salas/menu.gd" id="1_drk73"]
+[ext_resource type="FontFile" uid="uid://dw6geukrqx0gu" path="res://Assets/horroroid.ttf" id="2_2ln0s"]
+[ext_resource type="AudioStream" uid="uid://dlio7wcjvpgxn" path="res://Assets/Sounds/Ambience/Clouds behind the curtain.mp3" id="3_776v2"]
+[ext_resource type="Texture2D" uid="uid://ugppyxtr3m42" path="res://Assets/GUI/hud/normal.png" id="4_isu6q"]
+[ext_resource type="Texture2D" uid="uid://ctgrfvswijiyk" path="res://Assets/GUI/hud/normal1.png" id="5_ioh1v"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yw8oe"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wirtw"]
+texture = ExtResource("5_ioh1v")
+texture_margin_top = 2.0
+expand_margin_top = 18.0
+expand_margin_bottom = 11.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oatyu"]
+texture = ExtResource("4_isu6q")
+expand_margin_top = 18.0
+expand_margin_bottom = 11.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4fn4v"]
+texture = ExtResource("4_isu6q")
+texture_margin_top = 2.0
+expand_margin_top = 18.0
+expand_margin_bottom = 11.0
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_drk73")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.404511, 0.404511, 0.404511, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -10.0
+offset_top = -63.0
+offset_right = 9.0
+offset_bottom = 36.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_81qgk")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -178.0
+offset_top = -53.5
+offset_right = 178.0
+offset_bottom = 99.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
+
+[node name="btnPlay" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("2_2ln0s")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = SubResource("StyleBoxTexture_yw8oe")
+theme_override_styles/hover = SubResource("StyleBoxTexture_wirtw")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_oatyu")
+theme_override_styles/normal = SubResource("StyleBoxTexture_4fn4v")
+text = "JUGAR"
+
+[node name="btnInstruc" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("2_2ln0s")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = SubResource("StyleBoxTexture_yw8oe")
+theme_override_styles/hover = SubResource("StyleBoxTexture_wirtw")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_oatyu")
+theme_override_styles/normal = SubResource("StyleBoxTexture_4fn4v")
+text = "Instrucciones"
+
+[node name="btnExit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("2_2ln0s")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = SubResource("StyleBoxTexture_yw8oe")
+theme_override_styles/hover = SubResource("StyleBoxTexture_wirtw")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_oatyu")
+theme_override_styles/normal = SubResource("StyleBoxTexture_4fn4v")
+text = "salir"
+
+[node name="MainAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_776v2")
+autoplay = true
+
+[connection signal="pressed" from="VBoxContainer/btnPlay" to="." method="_on_btn_play_pressed"]
+[connection signal="pressed" from="VBoxContainer/btnInstruc" to="." method="_on_btn_instruc_pressed"]
+[connection signal="pressed" from="VBoxContainer/btnExit" to="." method="_on_btn_exit_pressed"]

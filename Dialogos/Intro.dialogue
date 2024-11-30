@@ -45,3 +45,4 @@ Lía: (llorando en silencio)
 Lía: (nota que hay algo más en el cuarto, una sombra que parece moverse por las paredes.)
 Lía: (en susurros) ¿Hola...? ¿Hay alguien ahí...?
 *(La historia queda en suspenso con Lía atrapada entre el miedo a sus padres y lo desconocido en el cuarto oscuro.)
+do change_scene()
