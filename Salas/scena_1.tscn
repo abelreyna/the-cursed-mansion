@@ -1,4 +1,4 @@
-[gd_scene load_steps=105 format=3 uid="uid://3pcsx1nk5dk0"]
+[gd_scene load_steps=106 format=3 uid="uid://3pcsx1nk5dk0"]
 
 [ext_resource type="PackedScene" uid="uid://pvoflxulo04h" path="res://Abel - recursos/Barras_1/info_barras.tscn" id="1_qp5bm"]
 [ext_resource type="PackedScene" uid="uid://drt58mt48yk0g" path="res://nodes/Character/main_character.tscn" id="1_yjgeo"]
@@ -54,6 +54,7 @@
 [ext_resource type="Texture2D" uid="uid://dyhrk2x60gqyq" path="res://suelo/Dead_tree_shadow1_1.png" id="50_8kh2i"]
 [ext_resource type="Texture2D" uid="uid://6txn36barlh4" path="res://suelo/Infernus_FloorDecal.png" id="51_aa2vi"]
 [ext_resource type="Texture2D" uid="uid://dol62b0fgiodq" path="res://suelo/Infernus_Skull4_2.png" id="52_v4jtu"]
+[ext_resource type="PackedScene" uid="uid://dcan3kryw4per" path="res://Assets/Objetos/bateria.tscn" id="53_g8wti"]
 [ext_resource type="Texture2D" uid="uid://dlebunqvcdprb" path="res://suelo/Infernus_Reliquary_1.png" id="53_rx0vb"]
 [ext_resource type="Texture2D" uid="uid://d2mejf0436lqx" path="res://suelo/Lich_shadow1.png" id="54_cdrb1"]
 [ext_resource type="Texture2D" uid="uid://cclhbpdn3daxv" path="res://suelo/Infernus_Lectern1_7.png" id="55_vto44"]
@@ -3770,7 +3771,7 @@ position = Vector2(-183.333, 208.667)
 zoom = Vector2(0.5, 0.5)
 
 [node name="Enemy_1" parent="." node_paths=PackedStringArray("player") instance=ExtResource("6_sy0r2")]
-position = Vector2(559, 2425)
+position = Vector2(2443, 2793)
 scale = Vector2(4.5, 4.5)
 collision_layer = 2
 collision_mask = 1
@@ -3782,7 +3783,12 @@ position = Vector2(594, 4199)
 scale = Vector2(4.5, 4.5)
 player = NodePath("../Character_main")
 
+[node name="Bateria" parent="." instance=ExtResource("53_g8wti")]
+position = Vector2(68, 1980)
+scale = Vector2(2.5, 2.5)
+
 [node name="Objetos Superpuestos" type="Node2D" parent="."]
+position = Vector2(131, 44)
 
 [node name="arco" type="Sprite2D" parent="Objetos Superpuestos"]
 position = Vector2(6348, 2878)
