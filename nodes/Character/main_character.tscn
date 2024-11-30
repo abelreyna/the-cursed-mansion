@@ -22,9 +22,9 @@
 [ext_resource type="Script" path="res://Script/point_light_2d.gd" id="17_d68ub"]
 [ext_resource type="Script" path="res://Script/health_component.gd" id="20_7u3p5"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p4eos"]
-radius = 48.0
-height = 160.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2wqha"]
+radius = 31.0
+height = 62.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_j8hhf"]
 atlas = ExtResource("1_hbwp7")
@@ -901,17 +901,19 @@ position = Vector2(100, 0)
 position = Vector2(-100, 0)
 
 [node name="ColNiña" type="CollisionShape2D" parent="."]
-position = Vector2(0, -26)
-shape = SubResource("CapsuleShape2D_p4eos")
+light_mask = 0
+position = Vector2(4, -3)
+shape = SubResource("CapsuleShape2D_2wqha")
 
 [node name="AnimNiña" type="AnimatedSprite2D" parent="."]
-position = Vector2(-6, -20)
-scale = Vector2(7.07292, 5.55469)
+position = Vector2(6, -29)
+scale = Vector2(6.89063, 5.51172)
 sprite_frames = SubResource("SpriteFrames_mrgw4")
 animation = &"walk_right_down_light"
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
-scale = Vector2(2.02841, 2.02841)
+position = Vector2(-3, -27)
+scale = Vector2(1.62216, 1.84825)
 color = Color(0.875377, 0.608962, 7.70092e-07, 0.686275)
 texture = ExtResource("9_f8h0f")
 script = ExtResource("17_d68ub")
