@@ -6,7 +6,7 @@ func _ready() -> void:
 	pass # Replace with function body.
 
 func _on_character_main_barra(vida: int) -> void:
-	print("llego papa: ", vida)
+	#print("llego papa: ", vida)
 	$barraCordura.value = vida
 
 

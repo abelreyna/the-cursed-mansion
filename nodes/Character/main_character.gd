@@ -21,6 +21,23 @@ var healt: int = 100
 
 var timer_energy: Timer
 var energia : int = 100 
+var verificaLuz :bool 
+
+#Función para sumar energia
+func _on_bateria_bateria() -> void:
+ # Aumenta la energía solo si es menor a 100
+	if verificaLuz is bool:
+		if energia < 100:
+			energia += 10  # Incrementa la energía en 10 puntos
+
+		# Asegúrate de que no sobrepase 100
+		if energia > 100:
+			energia = 100
+		
+		# Emitir la señal y mostrar la energía total
+		barraEnergia.emit(energia)
+		print("Energía total= ", energia)
+		
 
 # Función que se llama cuando el nodo está listo (cuando se ha agregado a la escena).
 func _ready() -> void:
@@ -48,17 +65,19 @@ func _ready() -> void:
 func _on_light_state_changed(is_on: bool) -> void:
 	# Verifica si la luz está encendida.
 	if is_on:
-		print("La luz está encendida.", healt)  # Imprime un mensaje indicando que la luz está encendida y muestra la salud actual.
+		verificaLuz = true
+		#print("La luz está encendida.", healt)  # Imprime un mensaje indicando que la luz está encendida y muestra la salud actual.
 		timer.stop()  # Detiene el Timer si la luz está encendida para evitar reducir salud.
 	else:
-		print("La luz está apagada.")  # Imprime un mensaje indicando que la luz está apagada.
+		verificaLuz = false
+		#print("La luz está apagada.")  # Imprime un mensaje indicando que la luz está apagada.
 		timer.start()  # Inicia el Timer si la luz está apagada, comenzando el conteo para reducir salud.
 
 # Función que se llama cuando el Timer se agota.
 func _on_timer_timeout() -> void:
 	
 	healt -= 1  # Resta 1 a la salud cada vez que el Timer se agota (cada 2 segundos).
-	print("Salud reducida:", healt)  # Imprime un mensaje mostrando la nueva cantidad de salud.
+	#print("Salud reducida:", healt)  # Imprime un mensaje mostrando la nueva cantidad de salud.
 
 	# Verifica si la salud ha llegado a 0 o menos.
 	if healt <= 0:
@@ -77,8 +96,8 @@ func _on_timer_energy_timeout() -> void:
 		healt += 1     # Aumenta salud en 1 unidad si la luz está encendida.
 		barra.emit(healt)
 		
-		print("Energía reducida:", energia)   # Imprime un mensaje mostrando la nueva cantidad de energía.
-		print("Salud aumentada:", healt)       # Imprime un mensaje mostrando la nueva cantidad de salud.
+		#print("Energía reducida:", energia)   # Imprime un mensaje mostrando la nueva cantidad de energía.
+		#print("Salud aumentada:", healt)       # Imprime un mensaje mostrando la nueva cantidad de salud.
 
 		if energia <= 0:
 			energia = 0
@@ -87,8 +106,8 @@ func _on_timer_energy_timeout() -> void:
 
 # Función que maneja lo que sucede cuando el personaje muere.
 func dead():
-	print("El personaje ha muerto.")  # Imprime un mensaje indicando que el personaje ha muerto.
-
+	#print("El personaje ha muerto.")  # Imprime un mensaje indicando que el personaje ha muerto.
+	pass
 # Función que se llama en cada frame. El parámetro delta representa el tiempo transcurrido desde el último frame.
 func _process(delta: float) -> void:
 	# Verifica si la acción "light" ha sido presionada en este frame.
@@ -102,17 +121,19 @@ func toggle_light() -> void:
 
 
 func _on_health_component_on_damagetook() -> void:
-	print("Se ha recibido daño.")
+	#print("Se ha recibido daño.")
 	healt -= 10
 	barra.emit(healt)
 
 
 func _on_health_component_on_dead() -> void:
-	print("El objeto ha muerto.")
+	#print("El objeto ha muerto.")
+	pass
 
 
 func _on_health_component_on_health_change(healt: int) -> void:
-	print("La salud ha cambiado a: ", healt)
+	#print("La salud ha cambiado a: ", healt)
+	pass
 
 
 

@@ -88,7 +88,7 @@ size = Vector2(182.75, 568.5)
 size = Vector2(650, 437)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1an42"]
-size = Vector2(131.5, 1371)
+size = Vector2(131.5, 1405)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xetnq"]
 size = Vector2(1898, 1992.5)
@@ -112,7 +112,7 @@ size = Vector2(1311, 931)
 size = Vector2(2452.5, 659)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o6r1a"]
-size = Vector2(1003.5, 480.5)
+size = Vector2(1205.55, 480.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7e1em"]
 size = Vector2(147, 890)
@@ -174,6 +174,12 @@ size = Vector2(250.75, 135)
 [node name="scena_1" type="Node2D"]
 position = Vector2(171, 316)
 
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+position = Vector2(26, 2614)
+color = Color(0.415686, 0.415686, 0.415686, 0.537255)
+energy = 2.25
+blend_mode = 1
+
 [node name="Info_barras" parent="." instance=ExtResource("1_qp5bm")]
 
 [node name="Fondo_1" type="Node2D" parent="."]
@@ -219,7 +225,7 @@ position = Vector2(604, 410)
 texture = SubResource("MeshTexture_7px7q")
 
 [node name="Decorative" type="Sprite2D" parent="Fondo_1"]
-position = Vector2(330, 423)
+position = Vector2(364, 348)
 scale = Vector2(3.17188, 1.89844)
 texture = ExtResource("5_mcgor")
 
@@ -3604,11 +3610,6 @@ position = Vector2(9950, 3921)
 scale = Vector2(10.0667, 10.3333)
 texture = ExtResource("22_slbf7")
 
-[node name="Mainlevbuild(14)2" type="Sprite2D" parent="Fondo_1"]
-position = Vector2(10853, 2461)
-scale = Vector2(7.62058, 10.015)
-texture = ExtResource("27_ync8a")
-
 [node name="Mainlevbuild(13)38" type="Sprite2D" parent="Fondo_1"]
 position = Vector2(10467, 3154.45)
 rotation = 1.5708
@@ -3784,7 +3785,23 @@ scale = Vector2(4.5, 4.5)
 player = NodePath("../Character_main")
 
 [node name="Bateria" parent="." instance=ExtResource("53_g8wti")]
-position = Vector2(68, 1980)
+position = Vector2(3394, 3900)
+scale = Vector2(2.5, 2.5)
+
+[node name="Bateria2" parent="." instance=ExtResource("53_g8wti")]
+position = Vector2(4241, 4586)
+scale = Vector2(2.5, 2.5)
+
+[node name="Bateria3" parent="." instance=ExtResource("53_g8wti")]
+position = Vector2(1550, 4871)
+scale = Vector2(2.5, 2.5)
+
+[node name="Bateria4" parent="." instance=ExtResource("53_g8wti")]
+position = Vector2(2103, 2340)
+scale = Vector2(2.5, 2.5)
+
+[node name="Bateria5" parent="." instance=ExtResource("53_g8wti")]
+position = Vector2(-433, 2112)
 scale = Vector2(2.5, 2.5)
 
 [node name="Objetos Superpuestos" type="Node2D" parent="."]
@@ -3996,11 +4013,10 @@ position = Vector2(7745, 1925)
 scale = Vector2(1.63879, 1.59082)
 texture = ExtResource("56_wlj6s")
 
-[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
-position = Vector2(26, 2614)
-color = Color(0.415686, 0.415686, 0.415686, 0.537255)
-energy = 2.25
-blend_mode = 1
+[node name="Mainlevbuild(14)2" type="Sprite2D" parent="Objetos Superpuestos"]
+position = Vector2(10647, 2477)
+scale = Vector2(7.62058, 10.015)
+texture = ExtResource("27_ync8a")
 
 [node name="AmbientAudio" type="AudioStreamPlayer" parent="."]
 
@@ -4038,7 +4054,7 @@ position = Vector2(783, 1471)
 shape = SubResource("RectangleShape2D_olgcj")
 
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-1205.25, 2498.5)
+position = Vector2(-1205.25, 2481.5)
 shape = SubResource("RectangleShape2D_1an42")
 
 [node name="CollisionShape2D9" type="CollisionShape2D" parent="StaticBody2D"]
@@ -4070,7 +4086,7 @@ position = Vector2(9316, 3987)
 shape = SubResource("RectangleShape2D_a2sqo")
 
 [node name="CollisionShape2D16" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(11728.8, 2611.75)
+position = Vector2(11627.8, 2611.75)
 shape = SubResource("RectangleShape2D_o6r1a")
 
 [node name="CollisionShape2D17" type="CollisionShape2D" parent="StaticBody2D"]
@@ -4155,3 +4171,8 @@ shape = SubResource("RectangleShape2D_756nj")
 
 [connection signal="barra" from="Character_main" to="Info_barras" method="_on_character_main_barra"]
 [connection signal="barraEnergia" from="Character_main" to="Info_barras" method="_on_character_main_barra_energia"]
+[connection signal="bateria" from="Bateria" to="Character_main" method="_on_bateria_bateria"]
+[connection signal="bateria" from="Bateria2" to="Character_main" method="_on_bateria_bateria"]
+[connection signal="bateria" from="Bateria3" to="Character_main" method="_on_bateria_bateria"]
+[connection signal="bateria" from="Bateria4" to="Character_main" method="_on_bateria_bateria"]
+[connection signal="bateria" from="Bateria5" to="Character_main" method="_on_bateria_bateria"]
