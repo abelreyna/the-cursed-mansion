@@ -914,7 +914,7 @@ animation = &"walk_right_down_light"
 [node name="PointLight2D" type="PointLight2D" parent="."]
 position = Vector2(-3, -27)
 scale = Vector2(1.62216, 1.84825)
-color = Color(0.875377, 0.608962, 7.70092e-07, 0.686275)
+color = Color(1, 0.820682, 0.547292, 0.686275)
 texture = ExtResource("9_f8h0f")
 script = ExtResource("17_d68ub")
 

@@ -1,3 +1,4 @@
 res://Salas/scena_1.tscn
 res://Salas/Intro.tscn
 res://Assets/Objetos/bateria.tscn
+res://nodes/Character/main_character.tscn
