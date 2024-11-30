@@ -3997,7 +3997,6 @@ scale = Vector2(1.63879, 1.59082)
 texture = ExtResource("56_wlj6s")
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
-visible = false
 position = Vector2(26, 2614)
 color = Color(0.41598, 0.41598, 0.41598, 1)
 energy = 2.25

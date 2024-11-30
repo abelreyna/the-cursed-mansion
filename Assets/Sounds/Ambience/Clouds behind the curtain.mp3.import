@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dlio7wcjvpgxn"
+path="res://.godot/imported/Clouds behind the curtain.mp3-44451eecb29d5203ce9db883a777917e.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sounds/Ambience/Clouds behind the curtain.mp3"
+dest_files=["res://.godot/imported/Clouds behind the curtain.mp3-44451eecb29d5203ce9db883a777917e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
