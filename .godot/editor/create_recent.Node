@@ -1,13 +1,11 @@
-<<<<<<< HEAD
+CharacterBody2D
 AnimatedSprite2D
-=======
 AnimationPlayer
 AudioStreamPlayer
 TextureRect
 Button
 VBoxContainer
 ColorRect
->>>>>>> d13d080621326638c0322c11c827ae3e4cce060a
 CollisionShape2D
 Area2D
 Node2D
@@ -15,12 +13,3 @@ StaticBody2D
 Node
 Timer
 Label
-ProgressBar
-CanvasLayer
-<<<<<<< HEAD
-AnimationPlayer
-TextureRect
-RichTextLabel
-ColorRect
-=======
->>>>>>> d13d080621326638c0322c11c827ae3e4cce060a

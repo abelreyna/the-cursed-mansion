@@ -10,6 +10,8 @@ const SPEED = 450
 signal barra
 signal barraEnergia
 
+
+
 #nodoizq y der
 @onready var pos_izq = $izq
 @onready var pos_der = $der
@@ -41,6 +43,7 @@ func _on_bateria_bateria() -> void:
 
 # Función que se llama cuando el nodo está listo (cuando se ha agregado a la escena).
 func _ready() -> void:
+	
 	# Conecta la señal "light_state_changed" del nodo point_light a la función "_on_light_state_changed".
 	# Esto permite que la función se ejecute cada vez que cambia el estado de la luz.
 	point_light.connect("light_state_changed", Callable(self, "_on_light_state_changed"))
@@ -66,16 +69,18 @@ func _on_light_state_changed(is_on: bool) -> void:
 	# Verifica si la luz está encendida.
 	if is_on:
 		verificaLuz = true
+
 		#print("La luz está encendida.", healt)  # Imprime un mensaje indicando que la luz está encendida y muestra la salud actual.
 		timer.stop()  # Detiene el Timer si la luz está encendida para evitar reducir salud.
 	else:
 		verificaLuz = false
+		
 		#print("La luz está apagada.")  # Imprime un mensaje indicando que la luz está apagada.
 		timer.start()  # Inicia el Timer si la luz está apagada, comenzando el conteo para reducir salud.
 
 # Función que se llama cuando el Timer se agota.
 func _on_timer_timeout() -> void:
-	
+
 	healt -= 1  # Resta 1 a la salud cada vez que el Timer se agota (cada 2 segundos).
 	#print("Salud reducida:", healt)  # Imprime un mensaje mostrando la nueva cantidad de salud.
 

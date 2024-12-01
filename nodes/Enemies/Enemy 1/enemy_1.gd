@@ -8,6 +8,7 @@ var speed = 150
 @export var player: Node2D
 @onready var nav_agent := $NavigationAgent2D as NavigationAgent2D
 
+
 var dir = global_position
 var fade_out_speed = 1.0 / 5.0  # Velocidad de desvanecimiento para 5 segundos
 var is_moving = false
@@ -20,19 +21,34 @@ func _ready() -> void:
 	_terror1_sound.volume_db = 0.0
 	_terror2_sound.volume_db = 0.0
 	makepaht()
+	
+func desaparece_enemy() -> void:
+	self.visible = false
+	if player.luz.visible:
+		self.visible = true
+		print("enemigos aparecen")
+	else:
+		self.visible = false
+		print("Enemigos desaparecen")
+		
+func _process(delta: float) -> void:
+	desaparece_enemy()
+
 
 func _physics_process(_delta: float) -> void:
+
 	var was_moving = is_moving
 	is_moving =  player.luz.visible and (player in $"VisiónRange".get_overlapping_bodies() or player in $"AttackRange".get_overlapping_bodies())
 	dirigirse()
-	
+
 	if player.luz.visible and player in $"VisiónRange".get_overlapping_bodies():
 		
 		if player not in $"AttackRange".get_overlapping_bodies():
+			speed = 300
 			makepaht()
 			# Reproduce animación de caminar
 			$AnimEnemy.play("Walk")
-			speed = 300
+			
 		elif player in $"AttackRange".get_overlapping_bodies():
 			$AnimEnemy.play("Attack")
 			speed = 0
@@ -87,7 +103,7 @@ func dirigirse() -> void:
 
 func makepaht() -> void:
 	dir = self.global_position.direction_to(objetivo)
-
+	
 func voltear() -> void:
 	if (self.global_position.direction_to(player.global_position).x < 0):
 		$AnimEnemy.scale.x = -2

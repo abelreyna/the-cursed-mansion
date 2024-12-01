@@ -3772,24 +3772,53 @@ position = Vector2(-183.333, 208.667)
 zoom = Vector2(0.5, 0.5)
 
 [node name="Enemy_1" parent="." node_paths=PackedStringArray("player") instance=ExtResource("6_sy0r2")]
+visible = true
 position = Vector2(2443, 2793)
 scale = Vector2(4.5, 4.5)
 collision_layer = 2
-collision_mask = 1
 player = NodePath("../Character_main")
 
 [node name="Enemy_2" parent="." node_paths=PackedStringArray("player") instance=ExtResource("6_sy0r2")]
-modulate = Color(1, 0, 0, 1)
-position = Vector2(594, 4199)
+visible = true
+position = Vector2(1024, 1870)
 scale = Vector2(4.5, 4.5)
+collision_layer = 2
+player = NodePath("../Character_main")
+
+[node name="Enemy_3" parent="." node_paths=PackedStringArray("player") instance=ExtResource("6_sy0r2")]
+visible = true
+position = Vector2(61, 3231)
+scale = Vector2(4.5, 4.5)
+collision_layer = 2
+player = NodePath("../Character_main")
+
+[node name="Enemy_4" parent="." node_paths=PackedStringArray("player") instance=ExtResource("6_sy0r2")]
+visible = true
+position = Vector2(2687, 3730)
+scale = Vector2(4.5, 4.5)
+collision_layer = 2
+player = NodePath("../Character_main")
+
+[node name="Enemy_5" parent="." node_paths=PackedStringArray("player") instance=ExtResource("6_sy0r2")]
+visible = true
+position = Vector2(-19, 4753)
+scale = Vector2(4.5, 4.5)
+collision_layer = 2
+player = NodePath("../Character_main")
+
+[node name="Enemy_6" parent="." node_paths=PackedStringArray("player") instance=ExtResource("6_sy0r2")]
+visible = true
+position = Vector2(4338, 3922)
+scale = Vector2(4.5, 4.5)
+collision_layer = 2
 player = NodePath("../Character_main")
 
 [node name="Bateria" parent="." instance=ExtResource("53_g8wti")]
-position = Vector2(3394, 3900)
+position = Vector2(2979, 4066)
 scale = Vector2(2.5, 2.5)
 
 [node name="Bateria2" parent="." instance=ExtResource("53_g8wti")]
-position = Vector2(4241, 4586)
+position = Vector2(4377, 4246)
 scale = Vector2(2.5, 2.5)
 
 [node name="Bateria3" parent="." instance=ExtResource("53_g8wti")]
@@ -3797,11 +3826,11 @@ position = Vector2(1550, 4871)
 scale = Vector2(2.5, 2.5)
 
 [node name="Bateria4" parent="." instance=ExtResource("53_g8wti")]
-position = Vector2(2103, 2340)
+position = Vector2(2642, 1926)
 scale = Vector2(2.5, 2.5)
 
 [node name="Bateria5" parent="." instance=ExtResource("53_g8wti")]
-position = Vector2(-433, 2112)
+position = Vector2(449, 1955)
 scale = Vector2(2.5, 2.5)
 
 [node name="Objetos Superpuestos" type="Node2D" parent="."]
@@ -4122,7 +4151,7 @@ position = Vector2(897, 4315)
 shape = SubResource("RectangleShape2D_nnkvj")
 
 [node name="CollisionShape2D25" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(3070.5, 4188)
+position = Vector2(3206, 4237)
 shape = SubResource("RectangleShape2D_ugf8y")
 
 [node name="CollisionShape2D26" type="CollisionShape2D" parent="StaticBody2D"]
@@ -4150,19 +4179,19 @@ position = Vector2(7450.25, 6652)
 shape = SubResource("RectangleShape2D_lcenw")
 
 [node name="CollisionShape2D32" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(2902, 6964.38)
+position = Vector2(3023, 7009)
 shape = SubResource("RectangleShape2D_l22gv")
 
 [node name="CollisionShape2D34" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(2322, 6767)
+position = Vector2(2443, 6805)
 shape = SubResource("CircleShape2D_h31bo")
 
 [node name="CollisionShape2D33" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(3465, 6724)
+position = Vector2(3611, 6762)
 shape = SubResource("CircleShape2D_h31bo")
 
 [node name="CollisionShape2D35" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(4393, 6318.5)
+position = Vector2(4533, 6357)
 shape = SubResource("RectangleShape2D_kh03c")
 
 [node name="CollisionShape2D36" type="CollisionShape2D" parent="StaticBody2D"]
