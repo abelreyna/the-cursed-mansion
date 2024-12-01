@@ -6,7 +6,7 @@ class_name HitboxComponent
 
 func _ready() -> void:
 	area_entered.connect(hit)
-	
+
 func hit(cuerpo):
 	if cuerpo is HealthComponent:
 		cuerpo.take_damage(damage)

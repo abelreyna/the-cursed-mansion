@@ -38,19 +38,21 @@ func _process(delta: float) -> void:
 func _physics_process(_delta: float) -> void:
 
 	var was_moving = is_moving
-	is_moving =  player.luz.visible and (player in $"VisiónRange".get_overlapping_bodies() or player in $"AttackRange".get_overlapping_bodies())
+	is_moving =  player.luz.visible and (player in $"VisiónRange".get_overlapping_bodies() or player in $"HitboxComponent".get_overlapping_bodies())
 	dirigirse()
 
 	if player.luz.visible and player in $"VisiónRange".get_overlapping_bodies():
 		
-		if player not in $"AttackRange".get_overlapping_bodies():
+		if player not in $"HitboxComponent".get_overlapping_bodies():
 			speed = 300
 			makepaht()
 			# Reproduce animación de caminar
 			$AnimEnemy.play("Walk")
 			
-		elif player in $"AttackRange".get_overlapping_bodies():
+		elif player in $"HitboxComponent".get_overlapping_bodies():
+			
 			$AnimEnemy.play("Attack")
+			
 			speed = 0
 			
 		# Reinicia los sonidos si el estado de movimiento cambió

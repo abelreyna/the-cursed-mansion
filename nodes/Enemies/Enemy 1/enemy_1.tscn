@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://ce7u5u0igniun"]
+[gd_scene load_steps=32 format=3 uid="uid://ce7u5u0igniun"]
 
 [ext_resource type="Texture2D" uid="uid://dotixs3xvpc7t" path="res://nodes/Enemies/Enemy 1/AnimationSheet_Character.png" id="1_ahbm4"]
 [ext_resource type="Script" path="res://nodes/Enemies/Enemy 1/enemy_1.gd" id="1_bpv33"]
@@ -184,15 +184,11 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_s68xr"]
 radius = 149.741
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_bu5bl"]
-radius = 25.678
-
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_w7dq5"]
-radius = 19.2
-height = 40.8
+radius = 38.0
+height = 76.0
 
 [node name="Enemy_1" type="CharacterBody2D"]
-visible = false
 scale = Vector2(2.5, 2.5)
 collision_layer = 4
 collision_mask = 5
@@ -225,13 +221,6 @@ visibility_layer = 0
 position = Vector2(7.62939e-06, 3.2)
 shape = SubResource("CircleShape2D_s68xr")
 one_way_collision_margin = 0.0
-
-[node name="AttackRange" type="Area2D" parent="."]
-collision_layer = 0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackRange"]
-position = Vector2(3.8147e-06, 0.400002)
-shape = SubResource("CircleShape2D_bu5bl")
 
 [node name="AudioWalk" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_xyvs7")

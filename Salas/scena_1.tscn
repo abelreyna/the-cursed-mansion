@@ -89,7 +89,7 @@ size = Vector2(182.75, 568.5)
 size = Vector2(650, 437)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1an42"]
-size = Vector2(131.5, 1405)
+size = Vector2(131.5, 1528)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xetnq"]
 size = Vector2(1898, 1992.5)
@@ -177,8 +177,8 @@ position = Vector2(171, 316)
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
 position = Vector2(26, 2614)
-color = Color(0.415686, 0.415686, 0.415686, 0.537255)
-energy = 2.25
+color = Color(1, 1, 1, 0.537255)
+energy = 1.8
 blend_mode = 1
 
 [node name="Info_barras" parent="." instance=ExtResource("1_qp5bm")]
@@ -3774,13 +3774,13 @@ cadaver = NodePath("../main_character_dead")
 zoom = Vector2(0.5, 0.5)
 
 [node name="Enemy_1" parent="." node_paths=PackedStringArray("player") instance=ExtResource("6_sy0r2")]
-position = Vector2(-459, 2720)
+position = Vector2(84, 2839)
 scale = Vector2(4.5, 4.5)
 collision_layer = 2
 player = NodePath("../Character_main")
 
 [node name="Enemy_2" parent="." node_paths=PackedStringArray("player") instance=ExtResource("6_sy0r2")]
-position = Vector2(-455, 2043)
+position = Vector2(99, 2020)
 scale = Vector2(4.5, 4.5)
 collision_layer = 2
 player = NodePath("../Character_main")
@@ -4071,7 +4071,7 @@ position = Vector2(337.25, 1496.75)
 shape = SubResource("RectangleShape2D_lvxkh")
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(1232.63, 1482)
+position = Vector2(1187, 1524)
 shape = SubResource("RectangleShape2D_lvxkh")
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D"]
@@ -4079,7 +4079,7 @@ position = Vector2(783, 1471)
 shape = SubResource("RectangleShape2D_olgcj")
 
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-1205.25, 2481.5)
+position = Vector2(-1205.25, 2420)
 shape = SubResource("RectangleShape2D_1an42")
 
 [node name="CollisionShape2D9" type="CollisionShape2D" parent="StaticBody2D"]
@@ -4195,7 +4195,6 @@ position = Vector2(4424.63, 4751.5)
 shape = SubResource("RectangleShape2D_756nj")
 
 [node name="main_character_dead" parent="." instance=ExtResource("73_mb4et")]
-visible = false
 scale = Vector2(1.5, 1.5)
 
 [connection signal="barra" from="Character_main" to="Info_barras" method="_on_character_main_barra"]

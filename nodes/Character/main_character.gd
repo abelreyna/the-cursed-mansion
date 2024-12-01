@@ -19,7 +19,7 @@ signal barraEnergia
 @onready var pos_izq = $izq
 @onready var pos_der = $der
 
-var healt: int = 100
+var healt: int = 1
 
 @onready var point_light = $PointLight2D  #  la ruta correcta al PointLight2D
 @onready var timer = $Timer  #  la ruta correcta al Timer
@@ -115,7 +115,7 @@ func _on_timer_energy_timeout() -> void:
 
 # Función que maneja lo que sucede cuando el personaje muere.
 func dead():
-	#luz_global.energy = 10
+	luz_global.energy = 0
 	verificadead = true
 	cadaver.global_position = self.global_position
 	cadaver.visible = true
@@ -214,7 +214,11 @@ func _physics_process(delta):
 	else:
 		luz.visible = false
 		SPEED = 0
+		walking_sound.stop()
 	
 	velocity = dir.normalized() * SPEED
 	
+	if healt <= 0:
+		healt = 0  # Asegúrate de no tener salud negativa, establece salud en 0.
+		dead()
 	move_and_slide()

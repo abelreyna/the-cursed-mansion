@@ -35,16 +35,13 @@ func set_health(value: int):
 	old_health = current_health  # Guarda el valor actual de la salud antes de cambiarlo.
 	current_health += value  # Ajusta la salud actual sumando el valor proporcionado.
 	current_health = clamp(current_health, 0, max_health)  # Limita la salud entre 0 y max_health.
-
 	# Verifica si ha habido un cambio en la salud actual.
 	if old_health != current_health:
 		onHealthChange.emit(current_health)  # Emite una señal con el nuevo valor de salud.
-
 	# Verifica si el personaje ha muerto (salud menor o igual a 0).
 	if current_health <= 0:
 		dead()  # Llama a la función dead() si la salud es menor o igual a 0.
 		return  # Sale de la función para evitar ejecutar más código.
-
 	# Verifica si se ha recibido daño y aún está vivo.
 	elif current_health >= 0 and current_health < old_health:
 		onDamagetook.emit()  # Emite una señal indicando que se ha recibido daño.
