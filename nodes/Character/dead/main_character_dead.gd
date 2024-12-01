@@ -10,8 +10,6 @@ func _dead():
 	$"AnimNiña".speed_scale = 0.30
 	$"AnimNiña".play("dead")
 	
-	
-	
 	if $DirectionalLight2D.energy >= 0:
 		$DirectionalLight2D.energy = $DirectionalLight2D.energy - 0.01
 

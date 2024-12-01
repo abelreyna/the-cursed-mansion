@@ -3774,42 +3774,36 @@ cadaver = NodePath("../main_character_dead")
 zoom = Vector2(0.5, 0.5)
 
 [node name="Enemy_1" parent="." node_paths=PackedStringArray("player") instance=ExtResource("6_sy0r2")]
-visible = true
-position = Vector2(2443, 2793)
+position = Vector2(-459, 2720)
 scale = Vector2(4.5, 4.5)
 collision_layer = 2
 player = NodePath("../Character_main")
 
 [node name="Enemy_2" parent="." node_paths=PackedStringArray("player") instance=ExtResource("6_sy0r2")]
-visible = true
-position = Vector2(1024, 1870)
+position = Vector2(-455, 2043)
 scale = Vector2(4.5, 4.5)
 collision_layer = 2
 player = NodePath("../Character_main")
 
 [node name="Enemy_3" parent="." node_paths=PackedStringArray("player") instance=ExtResource("6_sy0r2")]
-visible = true
 position = Vector2(61, 3231)
 scale = Vector2(4.5, 4.5)
 collision_layer = 2
 player = NodePath("../Character_main")
 
 [node name="Enemy_4" parent="." node_paths=PackedStringArray("player") instance=ExtResource("6_sy0r2")]
-visible = true
 position = Vector2(2687, 3730)
 scale = Vector2(4.5, 4.5)
 collision_layer = 2
 player = NodePath("../Character_main")
 
 [node name="Enemy_5" parent="." node_paths=PackedStringArray("player") instance=ExtResource("6_sy0r2")]
-visible = true
 position = Vector2(-19, 4753)
 scale = Vector2(4.5, 4.5)
 collision_layer = 2
 player = NodePath("../Character_main")
 
 [node name="Enemy_6" parent="." node_paths=PackedStringArray("player") instance=ExtResource("6_sy0r2")]
-visible = true
 position = Vector2(4338, 3922)
 scale = Vector2(4.5, 4.5)
 collision_layer = 2

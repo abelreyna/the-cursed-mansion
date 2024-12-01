@@ -19,7 +19,7 @@ signal barraEnergia
 @onready var pos_izq = $izq
 @onready var pos_der = $der
 
-var healt: int = 1
+var healt: int = 100
 
 @onready var point_light = $PointLight2D  #  la ruta correcta al PointLight2D
 @onready var timer = $Timer  #  la ruta correcta al Timer
@@ -216,4 +216,5 @@ func _physics_process(delta):
 		SPEED = 0
 	
 	velocity = dir.normalized() * SPEED
+	
 	move_and_slide()
