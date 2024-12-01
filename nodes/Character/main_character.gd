@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const SPEED = 450
+var SPEED = 450
 
 @onready var walking_sound = $AudioWalk
 @onready var luz := $PointLight2D as PointLight2D
@@ -10,13 +10,16 @@ const SPEED = 450
 signal barra
 signal barraEnergia
 
-
+#Identificar nodo luz globar
+@export var luz_global: DirectionalLight2D
+#Identificar nodo cadaver
+@export var cadaver: Node2D
 
 #nodoizq y der
 @onready var pos_izq = $izq
 @onready var pos_der = $der
 
-var healt: int = 100
+var healt: int = 1
 
 @onready var point_light = $PointLight2D  #  la ruta correcta al PointLight2D
 @onready var timer = $Timer  #  la ruta correcta al Timer
@@ -24,6 +27,7 @@ var healt: int = 100
 var timer_energy: Timer
 var energia : int = 100 
 var verificaLuz :bool 
+var verificadead :bool
 
 #Función para sumar energia
 func _on_bateria_bateria() -> void:
@@ -43,7 +47,7 @@ func _on_bateria_bateria() -> void:
 
 # Función que se llama cuando el nodo está listo (cuando se ha agregado a la escena).
 func _ready() -> void:
-	
+	barra.emit(healt)
 	# Conecta la señal "light_state_changed" del nodo point_light a la función "_on_light_state_changed".
 	# Esto permite que la función se ejecute cada vez que cambia el estado de la luz.
 	point_light.connect("light_state_changed", Callable(self, "_on_light_state_changed"))
@@ -111,6 +115,10 @@ func _on_timer_energy_timeout() -> void:
 
 # Función que maneja lo que sucede cuando el personaje muere.
 func dead():
+	#luz_global.energy = 10
+	verificadead = true
+	cadaver.global_position = self.global_position
+	cadaver.visible = true
 	#print("El personaje ha muerto.")  # Imprime un mensaje indicando que el personaje ha muerto.
 	pass
 # Función que se llama en cada frame. El parámetro delta representa el tiempo transcurrido desde el último frame.
@@ -146,62 +154,66 @@ func _on_health_component_on_health_change(healt: int) -> void:
 func _physics_process(delta):
 	var dir: Vector2 = Input.get_vector("izquierda", "derecha", "arriba", "abajo")
 	
-	# Cambiar visibilidad de la linterna y reproducir sonido correspondiente
-	if Input.is_action_just_pressed("light"):
-		luz.visible = !luz.visible
-		if luz.visible:
-			light_on_sound.play()
-		else:
-			light_off_sound.play()
-	
-	# Movimiento del personaje
-	if dir:
-		# Reproducir sonido de caminar si no está ya en reproducción
-		if not walking_sound.playing:
-			walking_sound.play()
-			
-		if dir.x != 0:
-			if dir.x > 0:
-				if dir.y > 0 or dir.y == 0:
-					if !luz.visible:
-						$"AnimNiña".play("walk_right_down")
-					else:
-						$"AnimNiña".play("walk_right_down_light")
-				if dir.y < 0:
-					if !luz.visible:
-						$"AnimNiña".play("walk_right_up")
-					else:
-						$"AnimNiña".play("walk_right_up_light")
+	if verificadead == false:
+		# Cambiar visibilidad de la linterna y reproducir sonido correspondiente
+		if Input.is_action_just_pressed("light"):
+			luz.visible = !luz.visible
+			if luz.visible:
+				light_on_sound.play()
 			else:
-				if dir.y > 0 or dir.y == 0:
-					if !luz.visible:
-						$"AnimNiña".play("walk_left_down")
-					else:
-						$"AnimNiña".play("walk_left_down_light")
-				if dir.y < 0:
-					if !luz.visible:
-						$"AnimNiña".play("walk_left_up")
-					else:
-						$"AnimNiña".play("walk_left_up_light")
-		else:
-			if dir.y > 0:
-				if !luz.visible:
-					$"AnimNiña".play("walk_down")
-				else:
-					$"AnimNiña".play("walk_down_light")
-			else:
-				if !luz.visible:
-					$"AnimNiña".play("walk_up")
-				else:
-					$"AnimNiña".play("walk_up_light")
-	else:
-		# Detener el sonido de caminar si el personaje está quieto
-		if walking_sound.playing:
-			walking_sound.stop()
-		if !luz.visible:
-			$"AnimNiña".play("Idle")
-		else:
-			$"AnimNiña".play("Idle_light")
+				light_off_sound.play()
 		
+		# Movimiento del personaje
+		if dir:
+			# Reproducir sonido de caminar si no está ya en reproducción
+			if not walking_sound.playing:
+				walking_sound.play()
+				
+			if dir.x != 0:
+				if dir.x > 0:
+					if dir.y > 0 or dir.y == 0:
+						if !luz.visible:
+							$"AnimNiña".play("walk_right_down")
+						else:
+							$"AnimNiña".play("walk_right_down_light")
+					if dir.y < 0:
+						if !luz.visible:
+							$"AnimNiña".play("walk_right_up")
+						else:
+							$"AnimNiña".play("walk_right_up_light")
+				else:
+					if dir.y > 0 or dir.y == 0:
+						if !luz.visible:
+							$"AnimNiña".play("walk_left_down")
+						else:
+							$"AnimNiña".play("walk_left_down_light")
+					if dir.y < 0:
+						if !luz.visible:
+							$"AnimNiña".play("walk_left_up")
+						else:
+							$"AnimNiña".play("walk_left_up_light")
+			else:
+				if dir.y > 0:
+					if !luz.visible:
+						$"AnimNiña".play("walk_down")
+					else:
+						$"AnimNiña".play("walk_down_light")
+				else:
+					if !luz.visible:
+						$"AnimNiña".play("walk_up")
+					else:
+						$"AnimNiña".play("walk_up_light")
+		else:
+			# Detener el sonido de caminar si el personaje está quieto
+			if walking_sound.playing:
+				walking_sound.stop()
+			if !luz.visible:
+				$"AnimNiña".play("Idle")
+			else:
+				$"AnimNiña".play("Idle_light")
+	else:
+		luz.visible = false
+		SPEED = 0
+	
 	velocity = dir.normalized() * SPEED
 	move_and_slide()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=106 format=3 uid="uid://3pcsx1nk5dk0"]
+[gd_scene load_steps=107 format=3 uid="uid://3pcsx1nk5dk0"]
 
 [ext_resource type="PackedScene" uid="uid://pvoflxulo04h" path="res://Abel - recursos/Barras_1/info_barras.tscn" id="1_qp5bm"]
 [ext_resource type="PackedScene" uid="uid://drt58mt48yk0g" path="res://nodes/Character/main_character.tscn" id="1_yjgeo"]
@@ -72,6 +72,7 @@
 [ext_resource type="Texture2D" uid="uid://dd6m7j2mixsfk" path="res://suelo/Infernus_Altar_6.png" id="68_hutp7"]
 [ext_resource type="Texture2D" uid="uid://d3rky218qepr7" path="res://suelo/Infernus_GorePile_5.png" id="69_d888e"]
 [ext_resource type="Texture2D" uid="uid://w6eakbs4dg43" path="res://suelo/Infernus_Book1_3.png" id="70_r51bt"]
+[ext_resource type="PackedScene" uid="uid://bbprf71652s0s" path="res://nodes/Character/dead/main_character_dead.tscn" id="73_mb4et"]
 
 [sub_resource type="MeshTexture" id="MeshTexture_7px7q"]
 
@@ -3762,13 +3763,14 @@ position = Vector2(1156.5, 3343.75)
 scale = Vector2(6.69928, 9.95779)
 texture = ExtResource("16_8jivg")
 
-[node name="Character_main" parent="." instance=ExtResource("1_yjgeo")]
+[node name="Character_main" parent="." node_paths=PackedStringArray("luz_global", "cadaver") instance=ExtResource("1_yjgeo")]
 position = Vector2(-890, 2407)
 scale = Vector2(1.5, 1.5)
 collision_mask = 6
+luz_global = NodePath("../DirectionalLight2D")
+cadaver = NodePath("../main_character_dead")
 
 [node name="Camera2D" type="Camera2D" parent="Character_main"]
-position = Vector2(-183.333, 208.667)
 zoom = Vector2(0.5, 0.5)
 
 [node name="Enemy_1" parent="." node_paths=PackedStringArray("player") instance=ExtResource("6_sy0r2")]
@@ -4197,6 +4199,10 @@ shape = SubResource("RectangleShape2D_kh03c")
 [node name="CollisionShape2D36" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(4424.63, 4751.5)
 shape = SubResource("RectangleShape2D_756nj")
+
+[node name="main_character_dead" parent="." instance=ExtResource("73_mb4et")]
+visible = false
+scale = Vector2(1.5, 1.5)
 
 [connection signal="barra" from="Character_main" to="Info_barras" method="_on_character_main_barra"]
 [connection signal="barraEnergia" from="Character_main" to="Info_barras" method="_on_character_main_barra_energia"]
