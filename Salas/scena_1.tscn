@@ -4199,6 +4199,7 @@ scale = Vector2(1.5, 1.5)
 
 [connection signal="barra" from="Character_main" to="Info_barras" method="_on_character_main_barra"]
 [connection signal="barraEnergia" from="Character_main" to="Info_barras" method="_on_character_main_barra_energia"]
+[connection signal="finAnimacionEnemy" from="Enemy_1" to="Character_main" method="_on_enemy_1_fin_animacion_enemy"]
 [connection signal="bateria" from="Bateria" to="Character_main" method="_on_bateria_bateria"]
 [connection signal="bateria" from="Bateria2" to="Character_main" method="_on_bateria_bateria"]
 [connection signal="bateria" from="Bateria3" to="Character_main" method="_on_bateria_bateria"]

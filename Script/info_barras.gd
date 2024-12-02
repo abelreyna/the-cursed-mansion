@@ -11,5 +11,4 @@ func _on_character_main_barra(vida: int) -> void:
 
 
 func _on_character_main_barra_energia(energia: int) -> void:
-	print("llego otra vez: ", energia)
 	$barraEnergia.value = energia

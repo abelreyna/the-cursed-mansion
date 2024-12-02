@@ -19,7 +19,7 @@ signal barraEnergia
 @onready var pos_izq = $izq
 @onready var pos_der = $der
 
-var healt: int = 1
+var healt: int = 100
 
 @onready var point_light = $PointLight2D  #  la ruta correcta al PointLight2D
 @onready var timer = $Timer  #  la ruta correcta al Timer
@@ -42,7 +42,7 @@ func _on_bateria_bateria() -> void:
 		
 		# Emitir la señal y mostrar la energía total
 		barraEnergia.emit(energia)
-		print("Energía total= ", energia)
+		
 		
 
 # Función que se llama cuando el nodo está listo (cuando se ha agregado a la escena).
@@ -135,8 +135,8 @@ func toggle_light() -> void:
 
 func _on_health_component_on_damagetook() -> void:
 	#print("Se ha recibido daño.")
-	healt -= 10
-	barra.emit(healt)
+	pass
+
 
 
 func _on_health_component_on_dead() -> void:
@@ -222,3 +222,10 @@ func _physics_process(delta):
 		healt = 0  # Asegúrate de no tener salud negativa, establece salud en 0.
 		dead()
 	move_and_slide()
+
+
+func _on_enemy_1_fin_animacion_enemy(variable: bool) -> void:
+	if variable:
+		healt -= 10
+		barra.emit(healt)
+		

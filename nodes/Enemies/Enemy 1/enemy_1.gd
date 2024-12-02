@@ -8,6 +8,7 @@ var speed = 150
 @export var player: Node2D
 @onready var nav_agent := $NavigationAgent2D as NavigationAgent2D
 
+signal finAnimacionEnemy
 
 var dir = global_position
 var fade_out_speed = 1.0 / 5.0  # Velocidad de desvanecimiento para 5 segundos
@@ -26,10 +27,10 @@ func desaparece_enemy() -> void:
 	self.visible = false
 	if player.luz.visible:
 		self.visible = true
-		print("enemigos aparecen")
+		
 	else:
 		self.visible = false
-		print("Enemigos desaparecen")
+		
 		
 func _process(delta: float) -> void:
 	desaparece_enemy()
@@ -111,3 +112,9 @@ func voltear() -> void:
 		$AnimEnemy.scale.x = -2
 	else:
 		$AnimEnemy.scale.x = 2
+
+
+func _on_animacionFinish_Attack() -> void:
+	var anifin = true
+	finAnimacionEnemy.emit(anifin)
+	pass # Replace with function body.

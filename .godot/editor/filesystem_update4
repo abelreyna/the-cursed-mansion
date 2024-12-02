@@ -1,7 +1,8 @@
-res://nodes/Character/dead/main_character_dead.tscn
-res://nodes/Character/dead/main_character_dead.gd
-res://Salas/Intro.tscn
 res://Salas/scena_1.tscn
+res://Salas/Intro.tscn
 res://Assets/Objetos/bateria.tscn
 res://nodes/Enemies/Enemy 1/enemy_1.tscn
-res://nodes/Enemies/Enemigo_parka/enemigo_parka.tscn
+res://nodes/Character/dead/main_character_dead.tscn
+res://nodes/Enemies/Enemy 1/enemy_1.gd
+res://nodes/Character/main_character.gd
+res://Script/info_barras.gd
