@@ -176,6 +176,7 @@ size = Vector2(250.75, 135)
 position = Vector2(171, 316)
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+visible = false
 position = Vector2(26, 2614)
 color = Color(1, 1, 1, 0.537255)
 energy = 1.8
@@ -3763,6 +3764,78 @@ position = Vector2(1156.5, 3343.75)
 scale = Vector2(6.69928, 9.95779)
 texture = ExtResource("16_8jivg")
 
+[node name="Enemy_1" parent="." node_paths=PackedStringArray("player") instance=ExtResource("6_sy0r2")]
+position = Vector2(99, 2139)
+scale = Vector2(4.5, 4.5)
+collision_layer = 2
+player = NodePath("../Character_main")
+
+[node name="Enemy_2" parent="." node_paths=PackedStringArray("player") instance=ExtResource("6_sy0r2")]
+position = Vector2(5245, 5169)
+scale = Vector2(4.5, 4.5)
+collision_layer = 2
+player = NodePath("../Character_main")
+
+[node name="Enemy_3" parent="." node_paths=PackedStringArray("player") instance=ExtResource("6_sy0r2")]
+position = Vector2(1389, 5454)
+scale = Vector2(4.5, 4.5)
+collision_layer = 2
+player = NodePath("../Character_main")
+
+[node name="Enemy_4" parent="." node_paths=PackedStringArray("player") instance=ExtResource("6_sy0r2")]
+position = Vector2(2682, 3428)
+scale = Vector2(4.5, 4.5)
+collision_layer = 2
+player = NodePath("../Character_main")
+
+[node name="Enemy_5" parent="." node_paths=PackedStringArray("player") instance=ExtResource("6_sy0r2")]
+position = Vector2(2667, 2244)
+scale = Vector2(4.5, 4.5)
+collision_layer = 2
+player = NodePath("../Character_main")
+
+[node name="Enemy_6" parent="." node_paths=PackedStringArray("player") instance=ExtResource("6_sy0r2")]
+position = Vector2(-249, 3457)
+scale = Vector2(4.5, 4.5)
+collision_layer = 2
+player = NodePath("../Character_main")
+
+[node name="Enemy_7" parent="." node_paths=PackedStringArray("player") instance=ExtResource("6_sy0r2")]
+position = Vector2(5001, 2498)
+scale = Vector2(4.5, 4.5)
+collision_layer = 2
+player = NodePath("../Character_main")
+
+[node name="Enemy_8" parent="." node_paths=PackedStringArray("player") instance=ExtResource("6_sy0r2")]
+position = Vector2(6140, 748)
+scale = Vector2(4.5, 4.5)
+collision_layer = 2
+player = NodePath("../Character_main")
+
+[node name="Enemy_9" parent="." node_paths=PackedStringArray("player") instance=ExtResource("6_sy0r2")]
+position = Vector2(8094, 2426)
+scale = Vector2(4.5, 4.5)
+collision_layer = 2
+player = NodePath("../Character_main")
+
+[node name="Enemy_10" parent="." node_paths=PackedStringArray("player") instance=ExtResource("6_sy0r2")]
+position = Vector2(10139, 4525)
+scale = Vector2(4.5, 4.5)
+collision_layer = 2
+player = NodePath("../Character_main")
+
+[node name="Enemy_11" parent="." node_paths=PackedStringArray("player") instance=ExtResource("6_sy0r2")]
+position = Vector2(6695, 7162)
+scale = Vector2(4.5, 4.5)
+collision_layer = 2
+player = NodePath("../Character_main")
+
+[node name="Enemy_12" parent="." node_paths=PackedStringArray("player") instance=ExtResource("6_sy0r2")]
+position = Vector2(11740, 3341)
+scale = Vector2(4.5, 4.5)
+collision_layer = 2
+player = NodePath("../Character_main")
+
 [node name="Character_main" parent="." node_paths=PackedStringArray("luz_global", "cadaver") instance=ExtResource("1_yjgeo")]
 position = Vector2(-890, 2407)
 scale = Vector2(1.5, 1.5)
@@ -3772,42 +3845,6 @@ cadaver = NodePath("../main_character_dead")
 
 [node name="Camera2D" type="Camera2D" parent="Character_main"]
 zoom = Vector2(0.5, 0.5)
-
-[node name="Enemy_1" parent="." node_paths=PackedStringArray("player") instance=ExtResource("6_sy0r2")]
-position = Vector2(84, 2839)
-scale = Vector2(4.5, 4.5)
-collision_layer = 2
-player = NodePath("../Character_main")
-
-[node name="Enemy_2" parent="." node_paths=PackedStringArray("player") instance=ExtResource("6_sy0r2")]
-position = Vector2(99, 2020)
-scale = Vector2(4.5, 4.5)
-collision_layer = 2
-player = NodePath("../Character_main")
-
-[node name="Enemy_3" parent="." node_paths=PackedStringArray("player") instance=ExtResource("6_sy0r2")]
-position = Vector2(61, 3231)
-scale = Vector2(4.5, 4.5)
-collision_layer = 2
-player = NodePath("../Character_main")
-
-[node name="Enemy_4" parent="." node_paths=PackedStringArray("player") instance=ExtResource("6_sy0r2")]
-position = Vector2(2687, 3730)
-scale = Vector2(4.5, 4.5)
-collision_layer = 2
-player = NodePath("../Character_main")
-
-[node name="Enemy_5" parent="." node_paths=PackedStringArray("player") instance=ExtResource("6_sy0r2")]
-position = Vector2(-19, 4753)
-scale = Vector2(4.5, 4.5)
-collision_layer = 2
-player = NodePath("../Character_main")
-
-[node name="Enemy_6" parent="." node_paths=PackedStringArray("player") instance=ExtResource("6_sy0r2")]
-position = Vector2(4338, 3922)
-scale = Vector2(4.5, 4.5)
-collision_layer = 2
-player = NodePath("../Character_main")
 
 [node name="Bateria" parent="." instance=ExtResource("53_g8wti")]
 position = Vector2(2979, 4066)
@@ -3827,6 +3864,38 @@ scale = Vector2(2.5, 2.5)
 
 [node name="Bateria5" parent="." instance=ExtResource("53_g8wti")]
 position = Vector2(449, 1955)
+scale = Vector2(2.5, 2.5)
+
+[node name="Bateria6" parent="." instance=ExtResource("53_g8wti")]
+position = Vector2(1470, 6850)
+scale = Vector2(2.5, 2.5)
+
+[node name="Bateria7" parent="." instance=ExtResource("53_g8wti")]
+position = Vector2(4549, 7305)
+scale = Vector2(2.5, 2.5)
+
+[node name="Bateria8" parent="." instance=ExtResource("53_g8wti")]
+position = Vector2(5841, 5169)
+scale = Vector2(2.5, 2.5)
+
+[node name="Bateria9" parent="." instance=ExtResource("53_g8wti")]
+position = Vector2(6047, 7173)
+scale = Vector2(2.5, 2.5)
+
+[node name="Bateria10" parent="." instance=ExtResource("53_g8wti")]
+position = Vector2(9664, 6045)
+scale = Vector2(2.5, 2.5)
+
+[node name="Bateria11" parent="." instance=ExtResource("53_g8wti")]
+position = Vector2(7261, 2628)
+scale = Vector2(2.5, 2.5)
+
+[node name="Bateria12" parent="." instance=ExtResource("53_g8wti")]
+position = Vector2(7895, 727)
+scale = Vector2(2.5, 2.5)
+
+[node name="Bateria13" parent="." instance=ExtResource("53_g8wti")]
+position = Vector2(4874, 829)
 scale = Vector2(2.5, 2.5)
 
 [node name="Objetos Superpuestos" type="Node2D" parent="."]
@@ -4195,13 +4264,33 @@ position = Vector2(4424.63, 4751.5)
 shape = SubResource("RectangleShape2D_756nj")
 
 [node name="main_character_dead" parent="." instance=ExtResource("73_mb4et")]
+visible = false
 scale = Vector2(1.5, 1.5)
 
+[connection signal="finAnimacionEnemy" from="Enemy_1" to="Character_main" method="_on_enemy_1_fin_animacion_enemy"]
+[connection signal="finAnimacionEnemy" from="Enemy_2" to="Character_main" method="_on_enemy_1_fin_animacion_enemy"]
+[connection signal="finAnimacionEnemy" from="Enemy_3" to="Character_main" method="_on_enemy_1_fin_animacion_enemy"]
+[connection signal="finAnimacionEnemy" from="Enemy_4" to="Character_main" method="_on_enemy_1_fin_animacion_enemy"]
+[connection signal="finAnimacionEnemy" from="Enemy_5" to="Character_main" method="_on_enemy_1_fin_animacion_enemy"]
+[connection signal="finAnimacionEnemy" from="Enemy_6" to="Character_main" method="_on_enemy_1_fin_animacion_enemy"]
+[connection signal="finAnimacionEnemy" from="Enemy_7" to="Character_main" method="_on_enemy_1_fin_animacion_enemy"]
+[connection signal="finAnimacionEnemy" from="Enemy_8" to="Character_main" method="_on_enemy_1_fin_animacion_enemy"]
+[connection signal="finAnimacionEnemy" from="Enemy_9" to="Character_main" method="_on_enemy_1_fin_animacion_enemy"]
+[connection signal="finAnimacionEnemy" from="Enemy_10" to="Character_main" method="_on_enemy_1_fin_animacion_enemy"]
+[connection signal="finAnimacionEnemy" from="Enemy_11" to="Character_main" method="_on_enemy_1_fin_animacion_enemy"]
+[connection signal="finAnimacionEnemy" from="Enemy_12" to="Character_main" method="_on_enemy_1_fin_animacion_enemy"]
 [connection signal="barra" from="Character_main" to="Info_barras" method="_on_character_main_barra"]
 [connection signal="barraEnergia" from="Character_main" to="Info_barras" method="_on_character_main_barra_energia"]
-[connection signal="finAnimacionEnemy" from="Enemy_1" to="Character_main" method="_on_enemy_1_fin_animacion_enemy"]
 [connection signal="bateria" from="Bateria" to="Character_main" method="_on_bateria_bateria"]
 [connection signal="bateria" from="Bateria2" to="Character_main" method="_on_bateria_bateria"]
 [connection signal="bateria" from="Bateria3" to="Character_main" method="_on_bateria_bateria"]
 [connection signal="bateria" from="Bateria4" to="Character_main" method="_on_bateria_bateria"]
 [connection signal="bateria" from="Bateria5" to="Character_main" method="_on_bateria_bateria"]
+[connection signal="bateria" from="Bateria6" to="Character_main" method="_on_bateria_bateria"]
+[connection signal="bateria" from="Bateria7" to="Character_main" method="_on_bateria_bateria"]
+[connection signal="bateria" from="Bateria8" to="Character_main" method="_on_bateria_bateria"]
+[connection signal="bateria" from="Bateria9" to="Character_main" method="_on_bateria_bateria"]
+[connection signal="bateria" from="Bateria10" to="Character_main" method="_on_bateria_bateria"]
+[connection signal="bateria" from="Bateria11" to="Character_main" method="_on_bateria_bateria"]
+[connection signal="bateria" from="Bateria12" to="Character_main" method="_on_bateria_bateria"]
+[connection signal="bateria" from="Bateria13" to="Character_main" method="_on_bateria_bateria"]
