@@ -1,8 +1,8 @@
-res://Salas/scena_1.tscn
+res://nodes/Character/main_character.tscn
+res://nodes/Character/main_character.gd
 res://Salas/Intro.tscn
+res://Salas/scena_1.tscn
 res://Assets/Objetos/bateria.tscn
 res://nodes/Enemies/Enemy 1/enemy_1.tscn
 res://nodes/Character/dead/main_character_dead.tscn
-res://nodes/Enemies/Enemy 1/enemy_1.gd
-res://nodes/Character/main_character.gd
-res://Script/info_barras.gd
+res://Abel - recursos/Barras_1/info_barras.tscn

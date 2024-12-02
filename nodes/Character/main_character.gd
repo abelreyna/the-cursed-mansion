@@ -25,7 +25,7 @@ var healt: int = 100
 @onready var timer = $Timer  #  la ruta correcta al Timer
 
 var timer_energy: Timer
-var energia : int = 100 
+var energia : int = 1
 var verificaLuz :bool 
 var verificadead :bool
 
@@ -108,9 +108,9 @@ func _on_timer_energy_timeout() -> void:
 		#print("Energía reducida:", energia)   # Imprime un mensaje mostrando la nueva cantidad de energía.
 		#print("Salud aumentada:", healt)       # Imprime un mensaje mostrando la nueva cantidad de salud.
 
-		if energia <= 0:
-			energia = 0
-			point_light.visible = false  # Apaga la luz si se agota la energía.
+	elif energia <= 0:
+		energia = 0
+		point_light.visible = false  # Apaga la luz si se agota la energía.
 
 
 # Función que maneja lo que sucede cuando el personaje muere.
