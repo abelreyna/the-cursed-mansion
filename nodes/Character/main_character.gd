@@ -56,7 +56,7 @@ func _ready() -> void:
 	# Esto permite que la función se ejecute cada vez que el Timer se agota.
 	timer.connect("timeout", Callable(self, "_on_timer_timeout"))
 	# Establece el tiempo de espera del Timer en 2 segundos.
-	timer.wait_time = 2.0  
+	timer.wait_time = 1.0  
 	
 	# Crear y configurar el Timer para la energía
 	timer_energy = Timer.new()
