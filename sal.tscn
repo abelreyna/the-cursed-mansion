@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://cildugpf70qrm"]
+
+[ext_resource type="Script" path="res://Salas/sal.gd" id="1_n7y5k"]
+[ext_resource type="Texture2D" uid="uid://cy3b7i2u0rrko" path="res://suelo/mainlevbuild (18).png" id="2_wtite"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e1pfa"]
+size = Vector2(15.125, 307.25)
+
+[node name="Sal" type="Node2D"]
+light_mask = 8
+visibility_layer = 0
+scale = Vector2(2, 2)
+script = ExtResource("1_n7y5k")
+
+[node name="Mainlevbuild(18)4" type="Sprite2D" parent="."]
+position = Vector2(164, 334)
+rotation = 3.14159
+scale = Vector2(8.44827, 8.40942)
+texture = ExtResource("2_wtite")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(-360, 172)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(10619.6, 1809)
+shape = SubResource("RectangleShape2D_e1pfa")

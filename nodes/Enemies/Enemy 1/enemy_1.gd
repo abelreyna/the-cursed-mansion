@@ -64,7 +64,8 @@ func _physics_process(_delta: float) -> void:
 		speed = 0
 		# Reproduce animación de descanso
 		$AnimEnemy.play("Idle")
-		
+		var master_bus_index = AudioServer.get_bus_index("Master")
+		AudioServer.set_bus_volume_db(master_bus_index, -20)  # Ajusta a -20 dB o cualquier valor deseado
 		# Reduce el volumen de los sonidos gradualmente
 		walking_sound.volume_db = lerp(walking_sound.volume_db, -80.0, _delta * fade_out_speed)
 		_terror1_sound.volume_db = lerp(_terror1_sound.volume_db, -80.0, _delta * fade_out_speed)

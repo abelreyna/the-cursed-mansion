@@ -1,0 +1,101 @@
+[gd_scene load_steps=12 format=3 uid="uid://b7k3p25xvnolx"]
+
+[ext_resource type="Script" path="res://Script/instruciones.gd" id="1_forwb"]
+[ext_resource type="FontFile" uid="uid://dw6geukrqx0gu" path="res://Assets/horroroid.ttf" id="2_4at2t"]
+[ext_resource type="Texture2D" uid="uid://ctgrfvswijiyk" path="res://Assets/GUI/hud/normal1.png" id="3_7lfvo"]
+[ext_resource type="Texture2D" uid="uid://ugppyxtr3m42" path="res://Assets/GUI/hud/normal.png" id="4_mmsft"]
+[ext_resource type="AudioStream" uid="uid://dlio7wcjvpgxn" path="res://Assets/Sounds/Ambience/Clouds behind the curtain.mp3" id="5_x6rxa"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_label.gd" id="6_4i27t"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7joak"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jw0oi"]
+texture = ExtResource("3_7lfvo")
+texture_margin_top = 2.0
+expand_margin_top = 18.0
+expand_margin_bottom = 11.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2ieyo"]
+texture = ExtResource("4_mmsft")
+expand_margin_top = 18.0
+expand_margin_bottom = 11.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_il8ob"]
+texture = ExtResource("4_mmsft")
+texture_margin_top = 2.0
+expand_margin_top = 18.0
+expand_margin_bottom = 11.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3dui2"]
+bg_color = Color(0.6, 0.901961, 0.6, 1)
+
+[node name="instrucion" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_forwb")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = 8.0
+offset_right = 6.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.404511, 0.404511, 0.404511, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -178.0
+offset_top = 40.0
+offset_right = 178.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
+
+[node name="btnInstruc" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("2_4at2t")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = SubResource("StyleBoxTexture_7joak")
+theme_override_styles/hover = SubResource("StyleBoxTexture_jw0oi")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_2ieyo")
+theme_override_styles/normal = SubResource("StyleBoxTexture_il8ob")
+text = "Regresar"
+
+[node name="MainAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_x6rxa")
+autoplay = true
+
+[node name="DialogueLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 307.0
+offset_top = 56.0
+offset_right = 913.0
+offset_bottom = 337.0
+theme_override_styles/background = SubResource("StyleBoxFlat_3dui2")
+text = "Para mover puedes usar las teclas w(arriba), D(derecha), S(abajo), (izquierda).
+
+Tu objetivo será encontrar la salida y huir antes que los ritualistas te encuentren y sacrifiquen. ¿Podras encontrar la saldia ?
+
+Afortunadamente tienes una linterna para iluminar tu camino, lamentablente esta pose estacasa pila por lo que tendras que ir recolectando pilas en tu camino y asi aumentar la energia de la linterna.
+
+Recuerda mientras mas tiempo pases a oscuras menos cordura tendras por lo que podria ser inebitable caer en la locura y perder el juego. "
+script = ExtResource("6_4i27t")
+skip_pause_at_abbreviations = PackedStringArray("Mr", "Mrs", "Ms", "Dr", "etc", "eg", "ex")
+
+[connection signal="pressed" from="VBoxContainer/btnInstruc" to="." method="_on_btn_instruc_pressed"]

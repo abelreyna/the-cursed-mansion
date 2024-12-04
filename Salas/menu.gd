@@ -6,7 +6,8 @@ func _on_btn_play_pressed():
 
 
 func _on_btn_instruc_pressed():
-	pass # Replace with function body.
+	get_tree().change_scene_to_file("res://Dialogos/Instruciones.tscn")
+	
 
 
 func _on_btn_exit_pressed():

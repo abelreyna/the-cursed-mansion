@@ -1,0 +1,110 @@
+[gd_scene load_steps=12 format=3 uid="uid://dlen0w4moxdq5"]
+
+[ext_resource type="Script" path="res://Script/control.gd" id="1_ujpa0"]
+[ext_resource type="FontFile" uid="uid://dw6geukrqx0gu" path="res://Assets/horroroid.ttf" id="2_3hi4f"]
+[ext_resource type="Texture2D" uid="uid://ctgrfvswijiyk" path="res://Assets/GUI/hud/normal1.png" id="3_bddam"]
+[ext_resource type="Texture2D" uid="uid://ugppyxtr3m42" path="res://Assets/GUI/hud/normal.png" id="4_ub5rl"]
+[ext_resource type="AudioStream" uid="uid://dlio7wcjvpgxn" path="res://Assets/Sounds/Ambience/Clouds behind the curtain.mp3" id="5_6uy6l"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_label.gd" id="6_536ob"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_stisn"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bcgs3"]
+texture = ExtResource("3_bddam")
+texture_margin_top = 2.0
+expand_margin_top = 18.0
+expand_margin_bottom = 11.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uasgv"]
+texture = ExtResource("4_ub5rl")
+expand_margin_top = 18.0
+expand_margin_bottom = 11.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_07oat"]
+texture = ExtResource("4_ub5rl")
+texture_margin_top = 2.0
+expand_margin_top = 18.0
+expand_margin_bottom = 11.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ht61w"]
+bg_color = Color(0.6, 0.901961, 0.6, 1)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ujpa0")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = 8.0
+offset_right = 6.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.404511, 0.404511, 0.404511, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -178.0
+offset_top = 40.0
+offset_right = 178.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
+
+[node name="btnInstruc" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("2_3hi4f")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = SubResource("StyleBoxTexture_stisn")
+theme_override_styles/hover = SubResource("StyleBoxTexture_bcgs3")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_uasgv")
+theme_override_styles/normal = SubResource("StyleBoxTexture_07oat")
+text = "SALIR"
+
+[node name="MainAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_6uy6l")
+autoplay = true
+
+[node name="DialogueLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 452.0
+offset_top = 44.0
+offset_right = 1058.0
+offset_bottom = 349.0
+theme_override_constants/table_v_separation = 9
+theme_override_constants/table_h_separation = 7
+theme_override_constants/shadow_outline_size = 6
+theme_override_font_sizes/bold_italics_font_size = 4
+theme_override_font_sizes/italics_font_size = 5
+theme_override_font_sizes/normal_font_size = 21
+theme_override_styles/background = SubResource("StyleBoxFlat_ht61w")
+text = "¡Felicidades encontraste la saldia!
+ 
+Gracias por jugar \"The cursed Mansion\"
+
+Elaborador por Nocturnal Games: 
+
+Juan Abel Reyna Gonzales, 
+Danipza Delgado Quispe, 
+Alvaro Pilco Gallardo 
+Albert Garay Munive"
+script = ExtResource("6_536ob")
+skip_pause_at_abbreviations = PackedStringArray("Mr", "Mrs", "Ms", "Dr", "etc", "eg", "ex")
+
+[connection signal="pressed" from="VBoxContainer/btnInstruc" to="." method="_on_btn_instruc_pressed"]
