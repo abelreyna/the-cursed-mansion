@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://p108rjtu8kdx"]
 
 [ext_resource type="Script" path="res://Salas/intro.gd" id="1_8bjto"]
-[ext_resource type="Texture2D" uid="uid://bt3nt5enytjko" path="res://icon.svg" id="2_totdg"]
+[ext_resource type="Texture2D" uid="uid://bkohyxnscfeul" path="res://icon.svg" id="2_totdg"]
 
 [sub_resource type="Animation" id="Animation_uq3se"]
 resource_name = "Aparicion de escenas"

@@ -181,7 +181,6 @@ size = Vector2(39.4163, 45.901)
 position = Vector2(171, 316)
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
-visible = false
 position = Vector2(26, 2614)
 color = Color(1, 1, 1, 0.537255)
 energy = 1.8
@@ -4143,7 +4142,7 @@ collision_mask = 7
 player = NodePath("../Character_main")
 
 [node name="Character_main" parent="." node_paths=PackedStringArray("luz_global", "cadaver") instance=ExtResource("1_yjgeo")]
-position = Vector2(10295, 1570)
+position = Vector2(-835, 2461)
 scale = Vector2(1.5, 1.5)
 collision_mask = 14
 luz_global = NodePath("../DirectionalLight2D")
@@ -4630,7 +4629,6 @@ position = Vector2(4424.63, 4751.5)
 shape = SubResource("RectangleShape2D_756nj")
 
 [node name="main_character_dead" parent="." instance=ExtResource("73_mb4et")]
-visible = false
 scale = Vector2(1.5, 1.5)
 
 [node name="Salida" type="Area2D" parent="."]

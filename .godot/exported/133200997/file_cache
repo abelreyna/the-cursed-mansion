@@ -1,0 +1,31 @@
+res://Abel - recursos/Barras_1/info_barras.tscn::aae1df68d307b502af80e20e36d829e3::1733158244::res://.godot/exported/133200997/export-353a49248aeadb9163001a18fbbd0a49-info_barras.scn
+res://addons/dialogue_manager/components/editor_property/editor_property_control.tscn::83c10f9209448ce93c72ddc287f8a303::1732678865::res://.godot/exported/133200997/export-e6551c697be622f6f28de3ce27c66911-editor_property_control.scn
+res://addons/dialogue_manager/components/editor_property/resource_button.tscn::67fefd94b0c995c0334333063b6735f9::1732678865::res://.godot/exported/133200997/export-d6982417a6d4bbaa52c872e8d58f148a-resource_button.scn
+res://addons/dialogue_manager/components/code_edit.tscn::e04ee284f48613839c68ca1bd0183562::1732678865::res://.godot/exported/133200997/export-afb545b170719e27a7fd3f1340116b10-code_edit.scn
+res://addons/dialogue_manager/components/download_update_panel.tscn::53392c9bb833b0ea9290d6a2830b00e2::1732678865::res://.godot/exported/133200997/export-dd2309c54bebb1b8b4e2968b0836701e-download_update_panel.scn
+res://addons/dialogue_manager/components/errors_panel.tscn::c49d09fc2e4d8e70c68f258d10cda97e::1732678865::res://.godot/exported/133200997/export-ea6e1bfc6d22f187ea4da24ace7b5dce-errors_panel.scn
+res://addons/dialogue_manager/components/files_list.tscn::f540dff48d9f1fd2cfaf74974abb7e7b::1732678865::res://.godot/exported/133200997/export-2a28997d3f2fb7eefb2a8324333da88f-files_list.scn
+res://addons/dialogue_manager/components/find_in_files.tscn::bab279ba81d3f31957271d86a08a15d1::1732678865::res://.godot/exported/133200997/export-60c9c2fb186c3ec58bf069f3b83f71d0-find_in_files.scn
+res://addons/dialogue_manager/components/search_and_replace.tscn::624ceb1e98486fcdb2bfa47c84d13415::1732678865::res://.godot/exported/133200997/export-d227edfbcd00f694e71f0a4ef2516c28-search_and_replace.scn
+res://addons/dialogue_manager/components/title_list.tscn::3d3874a9d51d07b67b4e562b4a366a15::1732678865::res://.godot/exported/133200997/export-3f7e1494d2ca6bb96a353ad7ff2c972f-title_list.scn
+res://addons/dialogue_manager/components/update_button.tscn::e695eeaf8627ff830788a7a8c52b4993::1732678865::res://.godot/exported/133200997/export-7ca55931d1608d9ad1448730abe1df8e-update_button.scn
+res://addons/dialogue_manager/example_balloon/example_balloon.tscn::2f4f8fe03a539649bd29ee8e87a47f5d::1732678865::res://.godot/exported/133200997/export-57fc9b32a4ae3d4a3041b46baf4b8f92-example_balloon.scn
+res://addons/dialogue_manager/example_balloon/small_example_balloon.tscn::e0787d790283af9c457ecc368ac1c5f5::1732678865::res://.godot/exported/133200997/export-25872080cd204f02261b5746b425708f-small_example_balloon.scn
+res://addons/dialogue_manager/views/main_view.tscn::1fc6309434a89b2e8108362fd331d91c::1732678865::res://.godot/exported/133200997/export-378867351062275ea9ff7cce9c21c795-main_view.scn
+res://addons/dialogue_manager/views/settings_view.tscn::b0433bd995be862932da02d5fe596449::1732678865::res://.godot/exported/133200997/export-e616ee8b42797cb31c0c61fda637fec0-settings_view.scn
+res://addons/dialogue_manager/dialogue_label.tscn::3dad3d8722050913824e98c13e709193::1732678865::res://.godot/exported/133200997/export-e41b7d5321416240678013b406b79557-dialogue_label.scn
+res://addons/dialogue_manager/test_scene.tscn::7c8fde991e3f7f984aded21109628c8a::1732678865::res://.godot/exported/133200997/export-74a175fe1e216df3bdf79c5c27a2ac2c-test_scene.scn
+res://Assets/Objetos/bateria.tscn::6f4dc5bda3b739522e0be6c7a09982a6::1733334337::res://.godot/exported/133200997/export-14c7a7408242d71df5d51670ed6cd521-bateria.scn
+res://Dialogos/Instruciones.tscn::791dd7116f433663ab132da0ebdd054e::1733334337::res://.godot/exported/133200997/export-6f3b19b2681343a44104f900c27e8362-Instruciones.scn
+res://Dialogos/Salida.tscn::6edc86a4edac2849bd20fff1d8f85f38::1733334337::res://.godot/exported/133200997/export-b6eb7325af09460d816c3c1799c920ed-Salida.scn
+res://nodes/Character/dead/main_character_dead.tscn::bd387709c016b94818a7b8d6e9693f19::1733118535::res://.godot/exported/133200997/export-a53c57a506cfcb3f5482a684e9692125-main_character_dead.scn
+res://nodes/Character/main_character.tscn::cbbdfed2057d5c4d8df2d31504793d44::1733334337::res://.godot/exported/133200997/export-ab53dc3b7e12e018be228e4fc4823200-main_character.scn
+res://nodes/Enemies/Enemigo_parka/enemigo_parka.tscn::921c7c61035772dcb26ee479a3394abd::1733096169::res://.godot/exported/133200997/export-19416fe4f8c71b6cc5cd773c120d31d2-enemigo_parka.scn
+res://nodes/Enemies/Enemy 1/enemy_1.tscn::909dc52b98d2c2332185539eee3db9dc::1733334337::res://.godot/exported/133200997/export-e0c7035043bab4dc80cc0841e99b26bf-enemy_1.scn
+res://nodes/test_room.tscn::e4d4322e9d4b74465342ae2e1978dcdd::1732219344::res://.godot/exported/133200997/export-9766cd3fc72c98d64071eec75bd42341-test_room.scn
+res://Salas/Intro.tscn::c5882435e2ccc88e2e7a6c11de6ddc55::1733334337::res://.godot/exported/133200997/export-7e4e44cfa6cfb1a6a0f43a5670bfa7c1-Intro.scn
+res://Salas/Menu.tscn::ae287ebb9932d849029b0f07e9cfdfa0::1733334337::res://.godot/exported/133200997/export-27efd34efd4c8f432fef8cd0d09e76dd-Menu.scn
+res://Salas/scena_1.tscn::77e155d4423e2c6eaa32cab862f67543::1733334337::res://.godot/exported/133200997/export-4a2e49b21f4a805a766e8171385d4100-scena_1.scn
+res://node_2d.tscn::10973de456830292c980ea05899dfe8a::1732219344::res://.godot/exported/133200997/export-362256a061aa8890e9a1e558b11e5ec3-node_2d.scn
+res://sal.tscn::6680ed32740aa9c7a1749937abe0ceeb::1733327583::res://.godot/exported/133200997/export-e723b304fbab53d7c2433b9827b3874b-sal.scn
+res://Scene_prueba1.tscn::f9833665d61b4a0f740c33b09d41cfac::1732219344::res://.godot/exported/133200997/export-d5976108d851fc726e904b731fd71301-Scene_prueba1.scn

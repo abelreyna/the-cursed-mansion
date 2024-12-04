@@ -10,11 +10,13 @@ config_version=5
 
 [application]
 
-config/name="Platformer 2d"
-run/main_scene="res://Salas/Intro.tscn"
+config/name="The Cursed Mansion"
+config/description="¿Podras espacar? "
+run/main_scene="res://Salas/Menu.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 boot_splash/bg_color=Color(0.141176, 0.141176, 0.141176, 1)
-config/icon="res://icon.jpg"
+boot_splash/image="res://Abel - recursos/este mejor.png"
+config/icon="res://Abel - recursos/redimensionar (1).png"
 
 [autoload]
 
